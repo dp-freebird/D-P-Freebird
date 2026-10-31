@@ -744,13 +744,13 @@ finally{clearTimeout(timer);}
 }
 async function readStreamStatus(){
 const direct=await readDirectCasterStatus();
-if(direct.ok){streamOnline=direct.online;status();return;}
+if(direct.ok&&direct.online){streamOnline=true;status();return;}
 try{
 const r=await fetch('https://live-wire-entertainment-website.dlyons184.workers.dev/stream-status?t='+Date.now(),{cache:'no-store'});
 if(!r.ok)throw new Error('status '+r.status);
 const data=await r.json();
-streamOnline=!!data?.online;
-}catch(e){streamOnline=false;}
+streamOnline=!!data?.online||!!direct.online;
+}catch(e){streamOnline=!!direct.online;}
 status();
 }
 function status(){
