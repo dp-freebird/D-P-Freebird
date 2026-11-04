@@ -699,7 +699,8 @@ const fridayMoods=[['FEEL-GOOD MODE: ACTIVATED 🎧','You’re ready for big tun
 const getShowsForDate=(date)=>{
   const d=date.getDay();
   const iso=date.getFullYear()+'-'+String(date.getMonth()+1).padStart(2,'0')+'-'+String(date.getDate()).padStart(2,'0');
-  if(iso<'2026-10-03')return [];\n  if(iso==='2026-11-07')return [];
+  if(iso<'2026-10-03')return [];
+  if(iso==='2026-11-07')return [];
   if(iso==='2026-10-09')return [['Phoenix Friday Takeover with Mr Phoenix','8:00pm']];
   if((d===3||d===5)&&iso<'2026-10-30')return [];
   if(iso>='2026-11-09'&&iso<='2026-12-12'){
