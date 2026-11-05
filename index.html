@@ -31,7 +31,7 @@ body::after{background:linear-gradient(180deg,transparent,var(--blue),var(--purp
 .home-live-title{font-size:21px;font-weight:900;margin:7px 0 0}
 .home-live-time{color:#a9caff;font-weight:800;margin:0}
 .home-live-note{font-size:13px;opacity:.8;margin:4px 0 0}
-.radio-player{max-width:760px;margin:0 auto 32px;padding:20px;border:1px solid rgba(22,140,255,.7);border-radius:18px;background:linear-gradient(145deg,#10111e,#090b14);box-shadow:0 0 15px rgba(22,140,255,.16),0 0 26px rgba(139,53,255,.12);text-align:center}
+.radio-player{position:relative;isolation:isolate;overflow:hidden;max-width:760px;margin:0 auto 32px;padding:24px 20px;border:2px solid transparent;border-radius:22px;background:linear-gradient(145deg,#10111e,#090b14) padding-box,linear-gradient(115deg,var(--red),var(--purple),var(--blue),var(--red)) border-box;box-shadow:0 0 18px rgba(255,23,68,.22),0 0 30px rgba(22,140,255,.2),0 0 42px rgba(139,53,255,.18);text-align:center}.radio-player::before{content:"";position:absolute;inset:-2px;border-radius:inherit;padding:3px;background:conic-gradient(from 0deg,transparent 0 18%,var(--red) 24%,var(--purple) 36%,transparent 44% 55%,var(--blue) 63%,#00eaff 72%,transparent 82% 100%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:playerLightRun 3.2s linear infinite;pointer-events:none;z-index:-1}.radio-player::after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(ellipse at 0 50%,rgba(255,23,68,.12),transparent 35%),radial-gradient(ellipse at 100% 50%,rgba(22,140,255,.14),transparent 35%);pointer-events:none;z-index:-1}@keyframes playerLightRun{to{transform:rotate(360deg)}}
 .radio-player h2{margin:0 0 4px;font-size:clamp(24px,4vw,32px);text-transform:uppercase}
 .radio-player .mic{font-size:28px;color:#ff6a89;text-shadow:0 0 12px var(--red)}
 .radio-player p{margin:5px 0 14px;color:#c5c8da}
@@ -104,10 +104,13 @@ refresh();readStreamStatus();setInterval(readStreamStatus,15000);
 <div class="mic">🎙</div>
 <h2>Live Wire Jukebox</h2>
 <p>Press play and enjoy Live Wire Radio, wherever you are.</p>
+<div class="caster-player-shell">
 <div class="cstrEmbed" data-type="streamPlayer" data-publicToken="b4191823-4974-4ee2-9be8-7020f818c7d7" data-theme="dark" data-color="8b35ff" data-rendered="false">
-<a id="cstrFreePlayerBL1" href="https://www.caster.fm/">Free Shoutcast Hosting</a>
-<a id="cstrFreePlayerBL2" href="https://www.caster.fm/">Radio Stream Hosting</a>
-<a id="cstrFreePlayerBL3" href="https://www.caster.fm/">Radio Server Hosting</a>
+<a href="https://www.caster.fm">Shoutcast Hosting</a>
+<a href="https://www.caster.fm">Stream Hosting</a>
+<a href="https://www.caster.fm">Radio Server Hosting</a>
+</div>
+<p class="player-loading">CASTER.FM LIVE PLAYER • LOADING STREAM</p>
 </div>
 <a class="listen-cta" href="#listen-live" aria-label="Listen live on Live Wire Radio">LISTEN LIVE</a>
 </div>
