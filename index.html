@@ -37,6 +37,10 @@ body::after{background:linear-gradient(180deg,transparent,var(--blue),var(--purp
 .radio-player p{margin:5px 0 14px;color:#c5c8da}
 .cstrEmbed{max-width:100%;margin:0 auto}
 .cstrEmbed a{color:#b9a0ff}
+.cstrEmbed #cstrFreePlayerBL1,.cstrEmbed #cstrFreePlayerBL2,.cstrEmbed #cstrFreePlayerBL3{display:none!important}
+.radio-player{border:2px solid transparent;background:linear-gradient(145deg,#10111e,#090b14) padding-box,linear-gradient(115deg,var(--red),var(--purple),var(--blue)) border-box;box-shadow:0 0 18px rgba(255,23,68,.18),0 0 28px rgba(22,140,255,.16),0 0 36px rgba(139,53,255,.14)}
+.radio-player h2{text-shadow:0 0 8px var(--red),0 0 14px var(--blue)}
+.listen-cta{display:inline-block;margin-top:8px;padding:10px 18px;border-radius:999px;border:1px solid var(--red);background:linear-gradient(100deg,rgba(255,23,68,.3),rgba(139,53,255,.3),rgba(22,140,255,.3));color:#fff!important;text-decoration:none;font-weight:900;letter-spacing:1px;box-shadow:0 0 12px rgba(255,23,68,.24),0 0 18px rgba(22,140,255,.2)}
 .content-wrap{max-width:1000px;margin:0 auto;padding:0 18px}
 .book-promo{margin:34px auto 24px;max-width:680px;padding:18px;border:1px solid rgba(139,53,255,.65);border-radius:16px;background:#0d0d18;text-align:center}
 .book-promo h2{margin:0 0 5px}
@@ -65,7 +69,7 @@ footer a{color:#bba2ff}
 <body>
 <header class="hero"><div class="wrap">
 <div class="logo-ring"><img class="logo" src="live-wire-radio-logo.svg" alt="Live Wire Radio logo"></div>
-<div class="brand">Live Wire Radio</div>
+
 <p class="tag">Music. Personality. Community. Always on.</p>
 <p>Great music, live shows and good company — broadcasting on our website and on TikTok.</p>
 <nav class="nav-actions" aria-label="Main navigation">
@@ -99,12 +103,14 @@ refresh();readStreamStatus();setInterval(readStreamStatus,15000);
 <section id="listen-live" class="content-wrap">
 <div class="radio-player">
 <div class="mic">🎙</div>
-<h2>Listen Live</h2>
-<p>Listen to Live Wire Radio directly from the homepage.</p>
-<div class="cstrEmbed" data-type="newStreamPlayer" data-publicToken="b4191823-4974-4ee2-9be8-7020f818c7d7" data-theme="dark" data-color="8b35ff" data-rendered="false">
-<a href="https://www.caster.fm">Radio Hosting</a>
-<a href="https://www.caster.fm">Stream Hosting</a>
+<h2>Live Wire Jukebox</h2>
+<p>Press play and enjoy Live Wire Radio, wherever you are.</p>
+<div class="cstrEmbed" data-type="streamPlayer" data-publicToken="b4191823-4974-4ee2-9be8-7020f818c7d7" data-theme="dark" data-color="8b35ff" data-rendered="false">
+<a id="cstrFreePlayerBL1" href="https://www.caster.fm/">Free Shoutcast Hosting</a>
+<a id="cstrFreePlayerBL2" href="https://www.caster.fm/">Radio Stream Hosting</a>
+<a id="cstrFreePlayerBL3" href="https://www.caster.fm/">Radio Server Hosting</a>
 </div>
+<a class="listen-cta" href="#listen-live" aria-label="Listen live on Live Wire Radio">LISTEN LIVE</a>
 </div>
 </section>
 <script src="https://cdn.cloud.caster.fm/widgets/embed.js"></script>
