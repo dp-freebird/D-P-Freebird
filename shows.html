@@ -28,6 +28,15 @@ h1{text-align:center}
 footer{text-align:center;padding:22px;color:#aeb2c5;border-top:1px solid rgba(139,53,255,.25)}
 footer a{color:#bba2ff}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+
+/* Animated neon rims for the show cards */
+.show-card{position:relative;isolation:isolate;overflow:hidden;border:1px solid transparent;background:linear-gradient(145deg,#11121f,#090b14) padding-box,linear-gradient(120deg,#ff1744,#8b35ff,#168cff,#ff1744) border-box;box-shadow:0 0 13px rgba(139,53,255,.2),0 0 22px rgba(22,140,255,.12);transition:transform .25s,box-shadow .25s}
+.show-card::before{content:"";position:absolute;inset:-150%;z-index:-1;background:conic-gradient(from 0deg,transparent 0 75%,rgba(255,23,68,.48) 80%,rgba(139,53,255,.5) 86%,rgba(22,140,255,.48) 92%,transparent 98%);animation:showCardLightSweep 7s linear infinite;pointer-events:none}
+@keyframes showCardLightSweep{to{transform:rotate(360deg)}}
+.show-card:hover{transform:translateY(-4px);box-shadow:0 0 18px rgba(255,23,68,.25),0 0 28px rgba(22,140,255,.22),0 0 34px rgba(139,53,255,.2)}
+.show-card>*{position:relative}
+@media(prefers-reduced-motion:reduce){.show-card::before{animation:none}.show-card:hover{transform:none}}
+
 </style>
 </head>
 <body>
