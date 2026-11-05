@@ -14,9 +14,9 @@ body{background:#05060c;color:#f8f8ff}
 body::before{background:linear-gradient(90deg,transparent,var(--red),var(--purple),var(--blue),transparent);box-shadow:0 0 9px var(--red),0 0 18px var(--blue)}
 body::after{background:linear-gradient(180deg,transparent,var(--blue),var(--purple),var(--red),transparent);box-shadow:0 0 9px var(--purple),0 0 18px var(--red)}
 .hero{min-height:auto;padding:34px 18px 30px;background:radial-gradient(ellipse at 50% 0,rgba(139,53,255,.22),transparent 55%),linear-gradient(180deg,#0a0b16,#05060c);border-bottom:1px solid rgba(139,53,255,.3)}
-.hero .wrap{max-width:1000px}
-.logo-ring{position:relative;display:inline-flex;align-items:center;justify-content:center;width:min(230px,62vw);aspect-ratio:1;border-radius:50%;padding:5px;margin:0 auto 14px}
-.logo-ring:before{content:"";position:absolute;inset:0;border-radius:50%;padding:4px;background:conic-gradient(from 0deg,var(--red),var(--purple),var(--blue),var(--red));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:logoChase 4s linear infinite;filter:drop-shadow(0 0 8px var(--red)) drop-shadow(0 0 14px var(--blue))}
+.hero .wrap{max-width:1000px}.hero .wrap::before,.hero .wrap::after{display:none!important;content:none!important}
+.logo-ring{position:relative;display:inline-flex;align-items:center;justify-content:center;width:min(300px,76vw);aspect-ratio:1;border-radius:50%;padding:3px;margin:0 auto 12px}
+.logo-ring:before{content:"";position:absolute;inset:0;border-radius:50%;padding:3px;background:conic-gradient(from 0deg,var(--red),var(--purple),var(--blue),var(--red));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:logoChase 5s linear infinite;filter:drop-shadow(0 0 8px var(--red)) drop-shadow(0 0 14px var(--blue))}
 .logo{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;position:relative;z-index:1}
 @keyframes logoChase{to{transform:rotate(360deg)}}
 .brand{font-size:clamp(32px,6vw,54px);font-weight:1000;letter-spacing:2px;color:#fff;text-transform:uppercase;text-shadow:0 0 9px var(--red),0 0 18px var(--blue)}
@@ -84,6 +84,24 @@ footer a{color:#bba2ff}
 @keyframes requestButtonGlow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.35)}}
 @media(prefers-reduced-motion:reduce){.radio-player,.request-card::before,.request-button{animation:none}.request-card:hover{transform:none}}
 
+
+/* Homepage refinements: one close-fitting logo halo and gentle reactive controls */
+.hero .wrap::before,.hero .wrap::after{display:none!important;content:none!important}
+.logo-ring{width:min(300px,76vw);padding:3px;margin-bottom:12px}
+.logo-ring:before{inset:0;padding:3px;filter:drop-shadow(0 0 5px var(--red)) drop-shadow(0 0 9px var(--blue))}
+.nav-actions .btn{animation:navButtonBreath 4.8s ease-in-out infinite;box-shadow:0 0 9px rgba(139,53,255,.22),0 0 15px rgba(22,140,255,.12)}
+.nav-actions .btn:nth-child(2){animation-delay:1.1s}.nav-actions .btn:nth-child(3){animation-delay:2.2s}
+@keyframes navButtonBreath{0%,100%{box-shadow:0 0 7px rgba(139,53,255,.2),0 0 12px rgba(22,140,255,.12);filter:brightness(1)}50%{box-shadow:0 0 13px rgba(255,23,68,.25),0 0 21px rgba(139,53,255,.28),0 0 25px rgba(22,140,255,.18);filter:brightness(1.13)}}
+.radio-player{animation:jukeboxOffAirBreath 4.6s ease-in-out infinite}
+@keyframes jukeboxOffAirBreath{0%,100%{border-color:rgba(139,53,255,.62);box-shadow:0 0 8px rgba(139,53,255,.2),0 0 13px rgba(22,140,255,.12)}50%{border-color:rgba(22,140,255,.82);box-shadow:0 0 12px rgba(22,140,255,.28),0 0 18px rgba(139,53,255,.2)}}
+.radio-player.stream-live{animation:jukeboxLiveReact 1.35s ease-in-out infinite}
+@keyframes jukeboxLiveReact{0%,100%{border-color:rgba(255,23,68,.95);box-shadow:0 0 12px rgba(255,23,68,.36),0 0 20px rgba(139,53,255,.25),0 0 25px rgba(22,140,255,.18)}50%{border-color:rgba(22,140,255,1);box-shadow:0 0 16px rgba(22,140,255,.45),0 0 25px rgba(139,53,255,.32),0 0 32px rgba(255,23,68,.22)}}
+.jukebox-status{animation:offAirButtonBreath 4.6s ease-in-out infinite}
+@keyframes offAirButtonBreath{0%,100%{filter:brightness(1);box-shadow:0 0 8px rgba(139,53,255,.2)}50%{filter:brightness(1.22);box-shadow:0 0 14px rgba(139,53,255,.32),0 0 18px rgba(22,140,255,.18)}}
+.jukebox-status.is-live{animation:liveButtonReact 1.25s ease-in-out infinite}
+@keyframes liveButtonReact{0%,100%{background:linear-gradient(100deg,rgba(255,23,68,.42),rgba(139,53,255,.28));box-shadow:0 0 12px rgba(255,23,68,.38)}50%{background:linear-gradient(100deg,rgba(22,140,255,.42),rgba(139,53,255,.38));box-shadow:0 0 17px rgba(22,140,255,.45),0 0 22px rgba(139,53,255,.25)}}
+@media(prefers-reduced-motion:reduce){.logo-ring:before,.nav-actions .btn,.radio-player,.jukebox-status{animation:none!important}}
+
 </style>
 </head>
 <body>
@@ -116,9 +134,9 @@ const showForDate=date=>{const day=date.getDay(),iso=date.getFullYear()+'-'+Stri
 const nextShow=now=>{for(let i=0;i<=14;i++){const d=new Date(now);d.setDate(now.getDate()+i);const show=showForDate(d);if(!show)continue;if(i===0){const key=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');if(localStorage.getItem('lw-show-started-'+key)==='1'&&!streamOnline)continue}return{show,days:i}}return null};
 const set=(id,value)=>{const el=document.getElementById(id);if(el)el.textContent=value};
 const refresh=()=>{const now=new Date(),today=showForDate(now),key=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0'),mins=now.getHours()*60+now.getMinutes(),startedToday=localStorage.getItem('lw-show-started-'+key)==='1';if(streamOnline&&today&&mins>=today[2]){currentLiveShow=[today[0],today[1]];localStorage.setItem('lw-show-started-'+key,'1')}else if(!streamOnline)currentLiveShow=null;
-const pill=document.getElementById('jukeboxStatusButton'),nextName=document.getElementById('jukeboxNextName'),nextWhen=document.getElementById('jukeboxNextWhen');
-if(streamOnline){if(pill){pill.textContent='🔴 LIVE NOW';pill.classList.add('is-live')}if(nextName)nextName.textContent=currentLiveShow?currentLiveShow[0]:'Live Wire Radio';if(nextWhen)nextWhen.textContent=currentLiveShow?'ON AIR NOW • '+currentLiveShow[1]:'Continuous music';}
-else{if(pill){pill.textContent='⚫ OFF AIR — CHECK NEXT SHOW';pill.classList.remove('is-live')}let upcoming=null;for(let i=0;i<=14;i++){const d=new Date(now);d.setDate(now.getDate()+i);const show=showForDate(d);if(!show)continue;const dayKey=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');if(i===0&&(mins>=show[2]||localStorage.getItem('lw-show-started-'+dayKey)==='1'))continue;upcoming={show,days:i};break}if(nextName)nextName.textContent=upcoming?upcoming.show[0]:'More shows coming soon';if(nextWhen)nextWhen.textContent=upcoming?((upcoming.days===0?'Today':upcoming.days===1?'Tomorrow':'In '+upcoming.days+' days')+' • '+upcoming.show[1]):'Check the show schedule';}
+const pill=document.getElementById('jukeboxStatusButton'),nextName=document.getElementById('jukeboxNextName'),nextWhen=document.getElementById('jukeboxNextWhen'),player=document.querySelector('.radio-player');
+if(streamOnline){player?.classList.add('stream-live');if(pill){pill.textContent='🔴 LIVE NOW';pill.classList.add('is-live')}if(nextName)nextName.textContent=currentLiveShow?currentLiveShow[0]:'Live Wire Radio';if(nextWhen)nextWhen.textContent=currentLiveShow?'ON AIR NOW • '+currentLiveShow[1]:'Continuous music';}
+else{player?.classList.remove('stream-live');if(pill){pill.textContent='⚫ OFF AIR — CHECK NEXT SHOW';pill.classList.remove('is-live')}let upcoming=null;for(let i=0;i<=14;i++){const d=new Date(now);d.setDate(now.getDate()+i);const show=showForDate(d);if(!show)continue;const dayKey=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');if(i===0&&(mins>=show[2]||localStorage.getItem('lw-show-started-'+dayKey)==='1'))continue;upcoming={show,days:i};break}if(nextName)nextName.textContent=upcoming?upcoming.show[0]:'More shows coming soon';if(nextWhen)nextWhen.textContent=upcoming?((upcoming.days===0?'Today':upcoming.days===1?'Tomorrow':'In '+upcoming.days+' days')+' • '+upcoming.show[1]):'Check the show schedule';}
 const statusPill=document.getElementById('homeLivePill');if(streamOnline){statusPill?.classList.add('live');set('homeLivePill','🔴 LIVE NOW');set('homeLiveTitle',currentLiveShow?currentLiveShow[0]:'Live Wire Radio');set('homeLiveTime',currentLiveShow?'ON AIR NOW • '+currentLiveShow[1]:'ON AIR NOW • Continuous music');set('homeLiveNote','Live Wire Radio');return}
 statusPill?.classList.remove('live');if(today&&!startedToday){set('homeLivePill','🟡 TONIGHT');set('homeLiveTitle',today[0]);set('homeLiveTime','Starts at '+today[1]);set('homeLiveNote','Live Wire Radio');return}set('homeLivePill','🟢 NEXT UP');const n=nextShow(now);if(n){set('homeLiveTitle',n.show[0]);set('homeLiveTime',(n.days===1?'Tomorrow':n.days===0?'Today':'In '+n.days+' days')+' • '+n.show[1])}else{set('homeLiveTitle','Live Wire Radio');set('homeLiveTime','Continuous music available outside live shows')}set('homeLiveNote','Live Wire Radio');};
 const readStreamStatus=async()=>{const direct=await readDirectCasterStatus();if(direct.ok&&direct.online){streamOnline=true;refresh();return}try{const r=await fetch('https://live-wire-entertainment-website.dlyons184.workers.dev/stream-status?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('status '+r.status);const data=await r.json();streamOnline=!!data?.online||!!direct.online}catch(e){streamOnline=!!direct.online}refresh()};
