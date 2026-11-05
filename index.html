@@ -115,6 +115,20 @@ footer a{color:#bba2ff}
 @keyframes logoOrbitSpinReverse{to{transform:translate(-50%,-50%) rotate(-360deg)}}
 @media(prefers-reduced-motion:reduce){.logo-ring::before,.logo-ring::after,.logo-orbit{animation:none!important}}
 
+/* Live-on-air celebration: stronger pulsing buttons and flashing jukebox lights */
+.home-live-status.live{border-color:rgba(255,23,68,.95);animation:homeLivePanelPulse 1.35s ease-in-out infinite}
+.home-live-pill.live{animation:liveNowBadgePulse .9s ease-in-out infinite;background:linear-gradient(100deg,rgba(255,23,68,.42),rgba(139,53,255,.32),rgba(22,140,255,.3))}
+#jukeboxStatusButton.is-live{position:relative;isolation:isolate;overflow:hidden;animation:jukeboxLiveButtonPulse .8s ease-in-out infinite;border-color:#ff1744;background:linear-gradient(100deg,#a60028,#6e20a8,#075db5);box-shadow:0 0 12px #ff1744,0 0 24px #8b35ff,0 0 32px #168cff}
+#jukeboxStatusButton.is-live::after{content:"";position:absolute;inset:-40% -70%;z-index:-1;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.65) 49%,transparent 60%);animation:jukeboxButtonFlash 1.15s linear infinite;pointer-events:none}
+.radio-player.stream-live::before{animation:jukeboxLightRun .9s linear infinite;filter:brightness(1.8) drop-shadow(0 0 9px rgba(255,23,68,.95)) drop-shadow(0 0 16px rgba(22,140,255,.9))}
+.radio-player.stream-live::after{border:2px solid rgba(255,255,255,.42);box-shadow:inset 0 0 18px rgba(255,23,68,.28),0 0 18px rgba(22,140,255,.5);animation:jukeboxInnerFlash .7s ease-in-out infinite alternate}
+@keyframes homeLivePanelPulse{0%,100%{box-shadow:0 0 14px rgba(255,23,68,.3),0 0 22px rgba(22,140,255,.18)}50%{box-shadow:0 0 24px rgba(255,23,68,.58),0 0 34px rgba(139,53,255,.42),0 0 42px rgba(22,140,255,.34)}}
+@keyframes liveNowBadgePulse{0%,100%{box-shadow:0 0 9px rgba(255,23,68,.55),0 0 15px rgba(22,140,255,.25);filter:brightness(1)}50%{box-shadow:0 0 18px rgba(255,23,68,.95),0 0 28px rgba(139,53,255,.7),0 0 34px rgba(22,140,255,.6);filter:brightness(1.45)}}
+@keyframes jukeboxLiveButtonPulse{0%,100%{transform:scale(1);filter:brightness(1);box-shadow:0 0 12px #ff1744,0 0 22px #8b35ff,0 0 28px #168cff}50%{transform:scale(1.045);filter:brightness(1.55);box-shadow:0 0 20px #ff1744,0 0 34px #8b35ff,0 0 42px #168cff}}
+@keyframes jukeboxButtonFlash{to{transform:translateX(100%)}}
+@keyframes jukeboxInnerFlash{from{opacity:.35}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.home-live-status.live,.home-live-pill.live,#jukeboxStatusButton.is-live,.radio-player.stream-live::before,.radio-player.stream-live::after{animation:none!important}#jukeboxStatusButton.is-live::after{animation:none!important}}
+
 </style>
 </head>
 <body>
