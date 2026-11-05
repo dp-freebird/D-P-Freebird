@@ -102,6 +102,15 @@ footer a{color:#bba2ff}
 @keyframes jukeboxLiveReact{0%,100%{box-shadow:0 0 18px rgba(255,23,68,.48),0 0 28px rgba(139,53,255,.34),0 0 34px rgba(22,140,255,.28)}50%{box-shadow:0 0 23px rgba(22,140,255,.55),0 0 36px rgba(139,53,255,.42),0 0 44px rgba(255,23,68,.35)}}
 @media(prefers-reduced-motion:reduce){.logo-ring:before,.radio-player::before,.radio-player{animation:none!important}}
 
+
+/* Single true circular halo around the logo */
+.hero .wrap::before,.hero .wrap::after{content:none!important;display:none!important}
+.logo-ring{position:relative!important;display:block!important;box-sizing:border-box!important;width:min(320px,78vw)!important;height:min(320px,78vw)!important;min-width:0!important;min-height:0!important;max-width:none!important;aspect-ratio:1/1!important;flex:0 0 auto!important;margin:0 auto 14px!important;padding:5px!important;border:0!important;border-radius:50%!important;overflow:visible!important;isolation:isolate!important;line-height:0!important}
+.logo-ring::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;box-sizing:border-box!important;border:5px solid transparent!important;border-radius:50%!important;padding:0!important;background:conic-gradient(from 0deg,#ff1744 0deg,#ff5a9b 55deg,#8b35ff 130deg,#168cff 215deg,#00eaff 275deg,#8b35ff 325deg,#ff1744 360deg)!important;mask:none!important;-webkit-mask:none!important;animation:logoHaloSpin 3s linear infinite!important;filter:drop-shadow(0 0 7px rgba(255,23,68,.9)) drop-shadow(0 0 13px rgba(22,140,255,.85))!important;pointer-events:none!important}
+.logo-ring .logo{position:relative!important;display:block!important;box-sizing:border-box!important;width:100%!important;height:100%!important;min-width:0!important;max-width:none!important;aspect-ratio:1/1!important;object-fit:cover!important;border-radius:50%!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;z-index:1!important}
+@keyframes logoHaloSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.logo-ring::before{animation:none!important}}
+
 </style>
 </head>
 <body>
