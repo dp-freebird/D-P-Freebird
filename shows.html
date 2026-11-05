@@ -3,40 +3,83 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Our Shows | Live Wire Entertainment</title>
-<meta name="description" content="Explore Live Wire Entertainment shows with DJ Disco Dan and Mr Phoenix, including Feel Good Friday, The Wednesday Wire, Surprise Package Thursdays and The Music Train.">
+<title>Our Shows | Live Wire Radio</title>
+<meta name="description" content="Meet the presenters and discover all Live Wire Radio shows with DJ Disco Dan and Mr Phoenix.">
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="live-wire-radio-logo.svg" type="image/svg+xml">
 <style>
-.show-card h2{font-size:30px;margin-top:0}.show-card .show-kicker{color:#ffd43b;font-weight:800;letter-spacing:1px;text-transform:uppercase}.show-card .show-time{color:#58eaff;font-weight:800;font-size:19px}.show-card p{font-size:17px}.show-card ul{padding-left:22px}.shows-grid{display:grid;gap:20px}.show-card{position:relative;overflow:hidden}.show-card::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(110deg,transparent 15%,rgba(0,234,255,.06) 40%,transparent 55%,rgba(255,43,214,.06) 72%,transparent 88%);background-size:220% 100%;animation:sweep 9s linear infinite}@keyframes sweep{0%{background-position:120% 0}100%{background-position:-120% 0}}@media(prefers-reduced-motion:reduce){.show-card::after{animation:none}}
+:root{--red:#ff1744;--blue:#168cff;--purple:#8b35ff}
+body{background:#05060c;color:#fff}
+body::before{background:linear-gradient(90deg,transparent,var(--red),var(--purple),var(--blue),transparent);box-shadow:0 0 9px var(--red),0 0 18px var(--blue)}
+body::after{background:linear-gradient(180deg,transparent,var(--blue),var(--purple),var(--red),transparent);box-shadow:0 0 9px var(--purple),0 0 18px var(--red)}
+.hero{min-height:auto;padding:30px 18px;background:radial-gradient(ellipse at 50% 0,rgba(139,53,255,.2),transparent 60%),#080914;text-align:center}
+.logo{width:min(170px,42vw);aspect-ratio:1;object-fit:cover;border-radius:50%;border:3px solid var(--purple);box-shadow:0 0 12px var(--red),0 0 22px var(--blue)}
+.brand{font-size:clamp(30px,5vw,46px);font-weight:1000;text-transform:uppercase;letter-spacing:2px;text-shadow:0 0 10px var(--red),0 0 18px var(--blue)}
+.tag{color:#cbb6ff;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+.btn{border:1px solid var(--purple);background:linear-gradient(110deg,rgba(255,23,68,.18),rgba(22,140,255,.18));color:#fff;text-decoration:none}
+.show-card{background:linear-gradient(145deg,#11121f,#090b14);border:1px solid rgba(139,53,255,.55);border-radius:16px;padding:22px;box-shadow:0 0 14px rgba(139,53,255,.1)}
+.show-card h2{font-size:clamp(22px,4vw,30px);margin:0 0 6px}
+.show-kicker{font-size:12px;color:#c7aaff;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
+.show-time{color:#9bcaff;font-size:17px;font-weight:800;margin:4px 0 12px}
+.shows-grid{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr));margin:22px 0}
+@media(max-width:760px){.shows-grid{grid-template-columns:1fr}}
+.schedule-note{border:1px solid rgba(22,140,255,.5);background:#0c1020;padding:16px;border-radius:14px;text-align:center}
+h1{text-align:center}
+footer{text-align:center;padding:22px;color:#aeb2c5;border-top:1px solid rgba(139,53,255,.25)}
+footer a{color:#bba2ff}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 </style>
 </head>
 <body>
-<div class="hero"><div class="wrap">
-<img class="logo" src="live-wire-logo.jpg" alt="Live Wire Entertainment logo">
-<div class="bolt">⚡</div><div class="brand">Live Wire Entertainment</div>
-<p class="tag">Music • Live Entertainment • Community</p>
-<p>All of the Live Wire Entertainment shows in one place — from the flagship weekend nights to the midweek shows.</p>
-<a class="btn" href="index.html">⚡ Home</a><a class="btn" href="live-wire-bar.html">🍹 Live Wire Bar</a><a class="btn" href="live-wire-extras.html">🎉 Fun &amp; Extras</a>
-</div></div>
-
-<section><div class="wrap">
-<h1>⚡ Our Shows</h1>
-<div class="card" style="border:2px solid #00eaff;box-shadow:0 0 18px rgba(0,234,255,.22);margin:18px 0;padding:20px;text-align:center"><h2 style="margin-top:0">⚡💜 LIVE WIRE SHOWS ARE BACK IN FULL SWING! 💜⚡</h2><p><strong>DJ Disco Dan is back on air!</strong> Catch The Wednesday Wire on Wednesdays from 8pm and Feel Good Friday every Friday from 7:30pm. 🎧⚡</p><p>Mr Phoenix is away from 9th November through 12th December. There is no Saturday show on 7th November; Dan’s Saturday Floor Fillers begin on 14th November, running from 8pm until 12th December. The Music Train returns when Phoenix is back. 💜🎶</p></div>
-
-<p>Here you'll find the full Live Wire Entertainment show line-up, with each regular show listed together in one place.</p>
-<div class="shows-grid">
-
-<div class="card show-card"><div class="show-kicker">🎧 Friday nights</div><h2>Feel Good Friday with DJ Disco Dan</h2><p class="show-time">🕢 Fridays from 7:30pm–11:30pm</p><p><strong>Your weekend starts here!</strong> Music spanning the decades, big singalong favourites, forgotten gems, nostalgia, banter and plenty of feel-good energy from DJ Disco Dan at the Live Wire Bar.</p><ul><li>🎶 Music spanning the decades</li><li>💿 Forgotten gems and nostalgia</li><li>🔥 Ham Bag Tune Dig</li><li>🕙 <strong>Serious Jockin’ at 10pm</strong> — one full hour of non-stop music with no talking</li><li>✨ <strong>The Magic Half Hour</strong> — 11pm–11:30pm, the final half-hour of Feel Good Friday</li><li>🍹 Live Wire Bar atmosphere</li></ul></div>
-
-<div class="card show-card"><div class="show-kicker">⚡ Wednesday nights</div><h2>The Wednesday Wire with DJ Disco Dan</h2><p class="show-time">🕗 Wednesdays from 8pm–10:30pm — RESUMES 4TH NOVEMBER</p><p>DJ Disco Dan brings a fresh Wednesday night to the Live Wire Bar with music, requests, banter, nostalgia and a set of simple new features to give Wednesdays their own Live Wire identity.</p><ul><li>🍬 <strong>Werther’s Originals — THE TUNES YOUR NAN STILL KNOWS!</strong> — 30 minutes of 60s, 70s and classic oldies, definitely <strong>NOT Care Home FM!</strong> 😂</li><li>📻 <strong>Radio Rewind</strong> — 30 minutes of tunes from one particular year</li><li>🔥 <strong>Midweek Banger</strong> — one big tune to give Wednesday a proper kick</li><li>🤣 <strong>Dan’s Questionable Choice</strong> — an embarrassingly cheesy but genuinely good guilty pleasure</li><li>🍽️ <strong>Food for Thought</strong> — one fun food question or debate for the Live Wire family to get involved with</li><li>🚨 <strong>Is This Normal?!</strong> — a funny everyday habit or situation for the Live Wire family to decide: normal or absolutely weird?</li><li>🎧 Music, requests, banter and surprises with DJ Disco Dan</li></ul></div>
-
-<div class="card show-card"><div class="show-kicker">🎁 Thursday nights</div><h2>Surprise Package Thursdays with Mr Phoenix</h2><p class="show-time">🕗 Thursdays from around 8pm — paused 9 Nov–12 Dec</p><p>Mr Phoenix is away from 9th November through 12th December, so Surprise Package will take a short break and return after he’s back. Mr Phoenix brings a package of music, banter and surprises to the Live Wire Bar. Expect variety, music memories and plenty of cheeky banter along the way.</p><ul><li>🎵 Music and surprises</li><li>😂 Plenty of Mr Phoenix banter</li><li>🎸 Anything could be in the package</li></ul></div>
-
-<div class="card show-card"><div class="show-kicker">🚂 Saturday nights</div><h2>The Music Train with Mr Phoenix</h2><p class="show-time">🕗 Saturdays from 8pm — replaced by Saturday Floor Fillers 14 Nov–12 Dec</p><p><strong>Next stop... The Music Train!</strong> Mr Phoenix takes the community on a musical journey through the decades, with big tunes, nostalgia, banter and plenty of surprises.</p><ul><li>🚂 A musical journey through the decades</li><li>🎵 Classic favourites and memorable tunes</li><li>😂 Live Wire banter and cheeky charm</li><li>🎸 A healthy love of Nickelback</li></ul><p><strong>One-off update:</strong> There is no Music Train on Saturday 7th November because Mr Phoenix has plans. He may pop up on Sunday 8th November before going away, but this is not confirmed. During his absence, DJ Disco Dan hosts Saturday Floor Fillers from Saturday 14th November through 12th December, 8pm–11:30pm.</p></div>
-
+<header class="hero"><div class="wrap">
+<img class="logo" src="live-wire-radio-logo.svg" alt="Live Wire Radio logo">
+<div class="brand">Live Wire Radio</div>
+<p class="tag">Music. Personality. Community.</p>
+<p>Meet the presenters and explore the full radio schedule.</p>
+<a class="btn" href="index.html">Home</a> <a class="btn" href="index.html#listen-live">Listen Live</a>
+</div></header>
+<main class="wrap">
+<h1>🎙 Our Shows</h1>
+<div class="schedule-note">
+<strong>Presenter update</strong>
+<p>Mr Phoenix is away from 9 November through 12 December 2026. There is no Phoenix Express on Saturday 7 November. DJ Disco Dan hosts Saturday Floor Fillers from 14 November to 12 December, 8pm–11:30pm. The Phoenix Express returns after Phoenix's break.</p>
 </div>
-</div></section>
-
-<footer><p>© 2026 Live Wire Entertainment</p><p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p></footer>
+<div class="shows-grid">
+<article class="show-card">
+<div class="show-kicker">Wednesday nights · DJ Disco Dan</div>
+<h2>The Wednesday Wire</h2>
+<p class="show-time">Wednesdays · 8:00pm–10:30pm</p>
+<p>Midweek music, requests, nostalgia and cheeky conversation with DJ Disco Dan.</p>
+<ul><li><strong>Radio Rewind</strong> — 30 minutes of tunes from one particular year.</li><li><strong>Midweek Banger</strong> — one featured big tune.</li><li><strong>Dan’s Questionable Choice</strong> — a cheesy guilty-pleasure tune.</li><li><strong>Weathers Originals</strong> — 30 minutes of 60s and 70s oldies. Tunes your Nan still knows.</li><li><strong>Food for Thought</strong> and <strong>Is This Normal?!</strong> — questions and everyday debates for the community.</li></ul>
+</article>
+<article class="show-card">
+<div class="show-kicker">Thursday nights · Mr Phoenix</div>
+<h2>Thunder Thursdays</h2>
+<p class="show-time">Thursdays · around 8:00pm</p>
+<p>Mr Phoenix brings a lively mix of music, surprises and cheeky banter to Thursday nights.</p>
+</article>
+<article class="show-card">
+<div class="show-kicker">Friday nights · DJ Disco Dan</div>
+<h2>Feel Good Friday</h2>
+<p class="show-time">Fridays · 7:30pm–11:30pm (may run over)</p>
+<p>Your weekend starts here, with music across the decades, singalong favourites, forgotten gems, nostalgia and plenty of feel-good energy.</p>
+<ul><li><strong>Ham Bag Tune Dig</strong> — forgotten musical gems.</li><li><strong>Serious Jockin’</strong> — 10pm, one full hour of non-stop music with no talking.</li><li><strong>The Magic Half Hour</strong> — 11pm–11:30pm.</li></ul>
+</article>
+<article class="show-card">
+<div class="show-kicker">Saturday nights · Mr Phoenix</div>
+<h2>The Phoenix Express</h2>
+<p class="show-time">Saturdays · 8:00pm</p>
+<p>All aboard for a musical journey through the decades, with big tunes, nostalgia and Mr Phoenix’s trademark cheeky banter.</p>
+<p><strong>Temporary schedule:</strong> Phoenix is away 9 November–12 December. The Phoenix Express returns after his break.</p>
+</article>
+<article class="show-card">
+<div class="show-kicker">Saturday cover · DJ Disco Dan</div>
+<h2>Saturday Floor Fillers</h2>
+<p class="show-time">14 November–12 December · 8:00pm–11:30pm</p>
+<p>DJ Disco Dan keeps Saturday nights moving with a floor-filling mix while Mr Phoenix is away.</p>
+</article>
+</div>
+</main>
+<footer><p>© 2026 Live Wire Radio</p><p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p></footer>
 </body>
 </html>
