@@ -45,6 +45,21 @@ footer{border-top:1px solid rgba(139,53,255,.25);margin-top:34px;padding:22px;te
 footer a{color:#bba2ff}
 @media(max-width:600px){.hero{padding-top:25px}.radio-player{margin-left:12px;margin-right:12px;padding:15px}.home-live-status{margin-left:12px;margin-right:12px}}
 @media(prefers-reduced-motion:reduce){.logo-ring:before{animation:none}}
+
+.song-requests{margin:4px auto 34px}
+.request-heading{text-align:center;max-width:700px;margin:0 auto 18px}
+.request-heading h2{font-size:clamp(25px,4vw,34px);margin:0 0 6px;text-transform:uppercase;text-shadow:0 0 9px rgba(139,53,255,.5)}
+.request-heading p{color:#c5c8da;margin:0}
+.request-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.request-card{padding:20px;border:1px solid rgba(139,53,255,.55);border-radius:15px;background:linear-gradient(145deg,#11121f,#090b14);box-shadow:0 0 12px rgba(22,140,255,.1);text-align:center}
+.request-presenter{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:900;color:#a9caff}
+.request-card h3{font-size:21px;margin:7px 0}
+.request-card p{color:#c5c8da;min-height:48px;margin:0 0 14px}
+.request-button{display:inline-block;padding:11px 19px;border:1px solid #8b35ff;border-radius:999px;background:linear-gradient(110deg,rgba(255,23,68,.22),rgba(22,140,255,.22));color:#fff;text-decoration:none;font-weight:900;text-transform:uppercase;letter-spacing:.5px}
+.request-button:hover{border-color:#ff1744;box-shadow:0 0 14px rgba(255,23,68,.3)}
+.request-footnote{text-align:center;color:#aeb2c5;font-size:13px;margin:14px 0 0}
+@media(max-width:600px){.request-grid{grid-template-columns:1fr}.request-card{padding:18px}.request-card p{min-height:0}}
+
 </style>
 </head>
 <body>
@@ -93,6 +108,29 @@ refresh();readStreamStatus();setInterval(readStreamStatus,15000);
 </div>
 </section>
 <script src="https://cdn.cloud.caster.fm/widgets/embed.js"></script>
+
+<section class="content-wrap song-requests" aria-labelledby="songRequestTitle">
+  <div class="request-heading">
+    <h2 id="songRequestTitle">Request a Song</h2>
+    <p>Got a tune in mind? Choose your presenter and send your request straight to them.</p>
+  </div>
+  <div class="request-grid">
+    <article class="request-card">
+      <div class="request-presenter">DJ Disco Dan</div>
+      <h3>Request a song from Dan</h3>
+      <p>Got a classic, forgotten gem or absolute belter in mind? Send Dan your request.</p>
+      <a class="request-button" href="https://virtualdj.com/ask/discodan184" target="_blank" rel="noopener noreferrer">Request a song</a>
+    </article>
+    <article class="request-card">
+      <div class="request-presenter">Mr Phoenix</div>
+      <h3>Request a song from Phoenix</h3>
+      <p>Got a rock favourite, a big tune or something for The Phoenix Express? Send Phoenix your request.</p>
+      <a class="request-button" href="https://virtualdj.com/ask/djphoenix1021" target="_blank" rel="noopener noreferrer">Request a song</a>
+    </article>
+  </div>
+  <p class="request-footnote">Choose your DJ, send your request and keep listening to Live Wire Radio.</p>
+</section>
+
 <section class="content-wrap book-promo">
 <h2>🎙 Live Wire Banter</h2>
 <p>The book of one-liners, comebacks and cheeky banter featuring DJ Disco Dan and Mr Phoenix.</p>
