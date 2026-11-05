@@ -15,10 +15,11 @@ body::before{background:linear-gradient(90deg,transparent,var(--red),var(--purpl
 body::after{background:linear-gradient(180deg,transparent,var(--blue),var(--purple),var(--red),transparent);box-shadow:0 0 9px var(--purple),0 0 18px var(--red)}
 .hero{min-height:auto;padding:34px 18px 30px;background:radial-gradient(ellipse at 50% 0,rgba(139,53,255,.22),transparent 55%),linear-gradient(180deg,#0a0b16,#05060c);border-bottom:1px solid rgba(139,53,255,.3)}
 .hero .wrap{max-width:1000px}.hero .wrap::before,.hero .wrap::after{display:none!important;content:none!important}
-.logo-ring{position:relative;display:inline-flex;align-items:center;justify-content:center;width:min(300px,76vw);aspect-ratio:1;border-radius:50%;padding:3px;margin:0 auto 12px}
-.logo-ring:before{content:"";position:absolute;inset:0;border-radius:50%;padding:3px;background:conic-gradient(from 0deg,var(--red),var(--purple),var(--blue),var(--red));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:logoChase 5s linear infinite;filter:drop-shadow(0 0 8px var(--red)) drop-shadow(0 0 14px var(--blue))}
-.logo{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%;position:relative;z-index:1}
-@keyframes logoChase{to{transform:rotate(360deg)}}
+.logo-ring{position:relative;display:block;box-sizing:border-box;width:min(320px,78vw);height:min(320px,78vw);aspect-ratio:1/1;flex:0 0 auto;margin:0 auto 14px;padding:5px;border-radius:50%;isolation:isolate;line-height:0}
+.logo-ring::before{content:"";position:absolute;box-sizing:border-box;inset:0;width:100%;height:100%;border:5px solid transparent;border-radius:50%;background:conic-gradient(from 0deg,#ff1744 0deg,#ff5a9b 55deg,#8b35ff 130deg,#168cff 215deg,#00eaff 275deg,#8b35ff 325deg,#ff1744 360deg) border-box;mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);mask-composite:exclude;-webkit-mask:linear-gradient(#000 0 0) padding-box,-webkit-linear-gradient(#000 0 0);-webkit-mask-composite:xor;animation:logoHaloSpin 3s linear infinite;filter:drop-shadow(0 0 7px rgba(255,23,68,.85)) drop-shadow(0 0 13px rgba(22,140,255,.8));pointer-events:none}
+.logo-ring .logo{position:relative;display:block;box-sizing:border-box;width:100%;height:100%;max-width:none;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:0;padding:0;box-shadow:none;z-index:1}
+@keyframes logoHaloSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.logo-ring::before{animation:none}}
 .brand{font-size:clamp(32px,6vw,54px);font-weight:1000;letter-spacing:2px;color:#fff;text-transform:uppercase;text-shadow:0 0 9px var(--red),0 0 18px var(--blue)}
 .tag{color:#c9b4ff;font-weight:800;letter-spacing:2px;text-transform:uppercase}
 .hero p{max-width:680px;margin:12px auto}
