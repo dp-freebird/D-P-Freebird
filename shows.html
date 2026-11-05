@@ -37,11 +37,19 @@ footer a{color:#bba2ff}
 .show-card>*{position:relative}
 @media(prefers-reduced-motion:reduce){.show-card::before{animation:none}.show-card:hover{transform:none}}
 
+
+/* Larger matching circular neon logo halo on Our Shows */
+.logo-ring{position:relative;display:block;box-sizing:border-box;width:min(320px,78vw);height:min(320px,78vw);aspect-ratio:1/1;flex:0 0 auto;margin:0 auto 14px;padding:5px;border-radius:50%;isolation:isolate}
+.logo-ring::before{content:"";position:absolute;box-sizing:border-box;inset:0;width:100%;height:100%;border:5px solid transparent;border-radius:50%;background:conic-gradient(from 0deg,#ff1744 0deg,#ff5a9b 55deg,#8b35ff 130deg,#168cff 215deg,#00eaff 275deg,#8b35ff 325deg,#ff1744 360deg) border-box;mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);mask-composite:exclude;-webkit-mask:linear-gradient(#000 0 0) padding-box,-webkit-linear-gradient(#000 0 0);-webkit-mask-composite:xor;animation:logoHaloSpin 3.2s linear infinite;filter:drop-shadow(0 0 7px rgba(255,23,68,.85)) drop-shadow(0 0 13px rgba(22,140,255,.8));pointer-events:none}
+.logo-ring .logo{position:relative;display:block;box-sizing:border-box;width:100%;height:100%;max-width:none;aspect-ratio:1/1;object-fit:cover;border-radius:50%;border:0;padding:0;box-shadow:none;z-index:1}
+@keyframes logoHaloSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.logo-ring::before{animation:none}}
+
 </style>
 </head>
 <body>
 <header class="hero"><div class="wrap">
-<img class="logo" src="live-wire-radio-logo.svg" alt="Live Wire Radio logo">
+<div class="logo-ring"><img class="logo" src="live-wire-radio-logo.svg" alt="Live Wire Radio logo"></div>
 
 <p class="tag">Music. Personality. Community.</p>
 <p>Meet the presenters and explore the full radio schedule.</p>
