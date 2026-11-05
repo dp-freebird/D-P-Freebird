@@ -129,6 +129,64 @@ footer a{color:#bba2ff}
 @keyframes jukeboxInnerFlash{from{opacity:.35}to{opacity:1}}
 @media(prefers-reduced-motion:reduce){.home-live-status.live,.home-live-pill.live,#jukeboxStatusButton.is-live,.radio-player.stream-live::before,.radio-player.stream-live::after{animation:none!important}#jukeboxStatusButton.is-live::after{animation:none!important}}
 
+/* On-air jukebox: brighter, more lifelike perimeter LEDs and indicator lamps */
+.radio-player.stream-live{
+  animation:jukeboxLiveReact 1.15s ease-in-out infinite;
+  box-shadow:0 0 16px rgba(255,23,68,.38),0 0 28px rgba(22,140,255,.3),0 0 42px rgba(139,53,255,.22);
+}
+.radio-player.stream-live::before{
+  inset:-2px;
+  padding:5px;
+  background:
+    conic-gradient(from 0deg,
+      transparent 0deg 8deg,
+      rgba(255,23,68,.18) 12deg,
+      #ff315f 18deg,
+      #fff0f5 20deg,
+      #ff1744 23deg,
+      transparent 31deg 83deg,
+      rgba(22,140,255,.18) 88deg,
+      #168cff 96deg,
+      #e7f8ff 99deg,
+      #00d9ff 103deg,
+      transparent 112deg 174deg,
+      rgba(139,53,255,.18) 180deg,
+      #a94dff 188deg,
+      #f4eaff 191deg,
+      #8b35ff 195deg,
+      transparent 204deg 264deg,
+      rgba(255,23,68,.16) 270deg,
+      #ff1744 278deg,
+      #fff 281deg,
+      #ff4d8d 285deg,
+      transparent 294deg 360deg);
+  animation:jukeboxLedChase 2.1s linear infinite;
+  filter:brightness(1.35) drop-shadow(0 0 5px rgba(255,23,68,.95)) drop-shadow(0 0 10px rgba(22,140,255,.9)) drop-shadow(0 0 14px rgba(139,53,255,.65));
+}
+.radio-player.stream-live::after{
+  inset:5px;
+  border:1px solid rgba(255,255,255,.35);
+  box-shadow:inset 0 0 9px rgba(255,23,68,.25),inset 0 0 16px rgba(22,140,255,.18),0 0 12px rgba(22,140,255,.28);
+  animation:jukeboxLampBreath 1.05s ease-in-out infinite alternate;
+}
+.radio-player.stream-live .mic{
+  color:#fff;
+  text-shadow:0 0 5px #fff,0 0 12px #ff1744,0 0 20px #168cff;
+  animation:jukeboxMicIndicator .85s ease-in-out infinite alternate;
+}
+#jukeboxStatusButton.is-live{
+  animation:jukeboxLiveButtonPulse .72s ease-in-out infinite;
+  text-shadow:0 0 7px rgba(255,255,255,.9);
+}
+#jukeboxStatusButton.is-live::after{animation:jukeboxButtonFlash 1.45s ease-in-out infinite}
+@keyframes jukeboxLedChase{to{transform:rotate(360deg)}}
+@keyframes jukeboxLampBreath{from{opacity:.45;filter:brightness(.9)}to{opacity:1;filter:brightness(1.5)}}
+@keyframes jukeboxMicIndicator{from{opacity:.72;filter:brightness(1)}to{opacity:1;filter:brightness(1.6)}}
+@media(prefers-reduced-motion:reduce){
+ .radio-player.stream-live,.radio-player.stream-live::before,.radio-player.stream-live::after,
+ .radio-player.stream-live .mic,#jukeboxStatusButton.is-live,#jukeboxStatusButton.is-live::after{animation:none!important}
+}
+
 </style>
 </head>
 <body>
