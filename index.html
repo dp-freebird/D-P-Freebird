@@ -187,6 +187,13 @@ footer a{color:#bba2ff}
  .radio-player.stream-live .mic,#jukeboxStatusButton.is-live,#jukeboxStatusButton.is-live::after{animation:none!important}
 }
 
+
+/* Temporary LIVE WIRE ENTERTAINMENT reflection notice */
+.live-wire-reflection{max-width:760px;margin:22px auto;padding:20px 18px;text-align:center;border:1px solid rgba(255,70,190,.72);border-radius:18px;background:radial-gradient(ellipse at 50% 0,rgba(139,53,255,.16),transparent 65%),linear-gradient(145deg,#11101b,#080912);box-shadow:0 0 10px rgba(255,70,190,.24),0 0 22px rgba(139,53,255,.22),0 0 30px rgba(22,140,255,.14)}
+.live-wire-reflection img{display:block;width:min(170px,48vw);height:auto;aspect-ratio:1;object-fit:cover;border-radius:50%;margin:0 auto 14px;box-shadow:0 0 8px rgba(255,70,190,.45),0 0 18px rgba(139,53,255,.32),0 0 24px rgba(22,140,255,.2)}
+.live-wire-reflection h2{margin:0 0 8px;font-size:clamp(20px,4vw,27px);text-transform:uppercase;text-shadow:0 0 8px rgba(255,70,190,.45)}
+.live-wire-reflection p{margin:6px auto;color:#e6e1f5;max-width:620px}.live-wire-reflection .reflection-kicker{color:#c9b4ff;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;font-size:13px}.live-wire-reflection .reflection-thanks{font-weight:800;color:#fff}
+@media(max-width:600px){.live-wire-reflection{margin:18px 12px;padding:17px 14px}}
 </style>
 </head>
 <body>
@@ -201,6 +208,14 @@ footer a{color:#bba2ff}
 <a class="btn" href="https://linktr.ee/livewireentertainment23" target="_blank" rel="noopener">Our Links</a>
 </nav>
 </div></header>
+<section id="live-wire-reflection" class="content-wrap live-wire-reflection" aria-labelledby="reflectionTitle">
+<img src="live-wire-logo.jpg" alt="Live Wire Entertainment logo">
+<p class="reflection-kicker">A special Saturday send-off</p>
+<h2 id="reflectionTitle">Live Wire Entertainment – Easy Listening Reflection Radio</h2>
+<p><strong>Today – Saturday 7 November</strong></p>
+<p>Join us for a day of non-stop easy-listening music, memories and reflection as we look back on the Live Wire Entertainment journey.</p>
+<p class="reflection-thanks">Thank you to everyone who has listened, supported us and been part of the journey. The music continues… ❤️</p>
+</section>
 <div class="content-wrap">
 <div class="home-live-status" id="homeLiveStatus" aria-live="polite">
 <div class="home-live-pill" id="homeLivePill">CHECKING LIVE STATUS…</div>
