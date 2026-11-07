@@ -195,17 +195,40 @@ footer a{color:#bba2ff}
 .live-wire-reflection p{margin:6px auto;color:#e6e1f5;max-width:620px}.live-wire-reflection .reflection-kicker{color:#c9b4ff;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;font-size:13px}.live-wire-reflection .reflection-thanks{font-weight:800;color:#fff}
 @media(max-width:600px){.live-wire-reflection{margin:18px 12px;padding:17px 14px}}
 
-/* Four neon runners follow the rectangular logo outline */
-.hero .logo-ring{position:relative!important;display:block!important;box-sizing:border-box!important;width:min(760px,94vw)!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;margin:0 auto 24px!important;padding:8px!important;border:1px solid rgba(100,190,255,.22)!important;border-radius:12px!important;overflow:visible!important;isolation:isolate!important;line-height:0!important;box-shadow:0 0 10px rgba(22,140,255,.16),inset 0 0 8px rgba(139,53,255,.12)!important}
-.hero .logo-ring:before{content:""!important;position:absolute!important;inset:0!important;box-sizing:border-box!important;border:2px solid rgba(139,53,255,.42)!important;border-radius:12px!important;background:none!important;transform:none!important;animation:none!important;filter:none!important;pointer-events:none!important;z-index:2!important}
+/* Four close-set neon bands flow around the horizontal logo frame */
+@property --dp-band-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+.hero .logo-ring{
+ position:relative!important;display:block!important;box-sizing:border-box!important;
+ width:min(760px,94vw)!important;height:auto!important;min-height:0!important;
+ aspect-ratio:auto!important;margin:0 auto 24px!important;padding:11px!important;
+ border:0!important;border-radius:12px!important;overflow:visible!important;
+ isolation:isolate!important;line-height:0!important;background:transparent!important;
+}
+.hero .logo-ring:before{content:none!important;display:none!important}
 .hero .logo-ring:after{content:none!important;display:none!important}
-.hero .logo-ring .logo{position:relative!important;inset:auto!important;display:block!important;box-sizing:border-box!important;width:100%!important;height:auto!important;min-width:0!important;max-width:100%!important;aspect-ratio:auto!important;object-fit:contain!important;border-radius:6px!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;z-index:1!important}
-.hero .logo-ring .dp-light-runner{position:absolute!important;left:0!important;top:0!important;display:block!important;width:54px!important;height:5px!important;border-radius:999px!important;background:linear-gradient(90deg,transparent,#ff1744 18%,#ff5a9b 50%,#00eaff 82%,transparent)!important;box-shadow:0 0 7px 2px rgba(255,23,68,.95),0 0 13px 3px rgba(22,140,255,.8)!important;offset-path:inset(0 round 12px)!important;offset-anchor:center!important;offset-rotate:auto!important;animation:dpFreebirdRectangleChase 4s linear infinite!important;pointer-events:none!important;z-index:3!important}
-.hero .logo-ring .dp-light-runner:nth-of-type(2){animation-delay:-1s!important}
-.hero .logo-ring .dp-light-runner:nth-of-type(3){animation-delay:-2s!important}
-.hero .logo-ring .dp-light-runner:nth-of-type(4){animation-delay:-3s!important}
-@keyframes dpFreebirdRectangleChase{from{offset-distance:0%}to{offset-distance:100%}}
-@media(max-width:600px){.hero .logo-ring{width:96vw!important;padding:5px!important;margin-bottom:20px!important}.hero .logo-ring .dp-light-runner{width:38px!important;height:4px!important}}
+.hero .logo-ring .logo{
+ position:relative!important;inset:auto!important;display:block!important;
+ box-sizing:border-box!important;width:100%!important;height:auto!important;
+ min-width:0!important;max-width:100%!important;aspect-ratio:auto!important;
+ object-fit:contain!important;border-radius:6px!important;border:0!important;
+ padding:0!important;margin:0!important;box-shadow:none!important;z-index:1!important;
+}
+.hero .logo-ring .dp-light-runner{
+ position:absolute!important;inset:0!important;display:block!important;
+ box-sizing:border-box!important;border:2px solid transparent!important;
+ border-radius:13px!important;padding:0!important;pointer-events:none!important;
+ z-index:3!important;
+ background:conic-gradient(from var(--dp-band-angle),transparent 0deg,#ff1744 35deg,#ff5a9b 75deg,#8b35ff 115deg,#168cff 155deg,#00eaff 190deg,transparent 225deg,transparent 360deg) border-box!important;
+ -webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0)!important;
+ -webkit-mask-composite:xor!important;mask-composite:exclude!important;
+ animation:dpBandFlow 3.6s linear infinite!important;
+ filter:drop-shadow(0 0 3px rgba(255,23,68,.9)) drop-shadow(0 0 5px rgba(22,140,255,.75))!important;
+}
+.hero .logo-ring .dp-light-runner:nth-of-type(2){inset:2px!important;animation-delay:-.9s!important;opacity:.95!important}
+.hero .logo-ring .dp-light-runner:nth-of-type(3){inset:4px!important;animation-delay:-1.8s!important;opacity:.9!important}
+.hero .logo-ring .dp-light-runner:nth-of-type(4){inset:6px!important;animation-delay:-2.7s!important;opacity:.85!important}
+@keyframes dpBandFlow{from{--dp-band-angle:0deg}to{--dp-band-angle:360deg}}
+@media(max-width:600px){.hero .logo-ring{width:96vw!important;padding:9px!important;margin-bottom:20px!important}.hero .logo-ring .dp-light-runner{border-width:1.5px!important}}
 @media(prefers-reduced-motion:reduce){.hero .logo-ring .dp-light-runner{animation:none!important}}
 
 </style>
