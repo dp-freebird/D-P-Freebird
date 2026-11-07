@@ -14,20 +14,19 @@
 
 
 /* Eight clearly separated neon bands flowing around the D&P FREEBIRD logo */
+/* Four complete, concentric rounded-rectangle neon rings, matching the old circular logo treatment */
 @property --dp-band-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
-.dp-logo-frame{position:relative;display:block;box-sizing:border-box;width:min(760px,94vw);height:auto;margin:0 auto 26px;padding:56px;border-radius:18px;isolation:isolate;line-height:0}
-.dp-logo-frame .logo{position:relative;display:block;box-sizing:border-box;width:100%;height:auto;max-width:100%;margin:0;border:0;border-radius:6px;box-shadow:none;object-fit:contain;z-index:1}
-.dp-logo-frame .dp-light-runner{position:absolute;inset:0;display:block;box-sizing:border-box;border:3px solid transparent;border-radius:18px;pointer-events:none;z-index:3;background:conic-gradient(from var(--dp-band-angle),#ff1744 0deg,#ff5a9b 45deg,#a52dff 90deg,#168cff 140deg,#00eaff 180deg,#168cff 220deg,#a52dff 270deg,#ff1744 315deg,#ff1744 360deg) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:dpBandFlow 5.2s linear infinite;filter:drop-shadow(0 0 4px rgba(255,23,68,.98)) drop-shadow(0 0 7px rgba(22,140,255,.9))}
-.dp-logo-frame .dp-light-runner:nth-of-type(2){inset:7px;animation-delay:-0.65s;opacity:1.000}
-.dp-logo-frame .dp-light-runner:nth-of-type(3){inset:14px;animation-delay:-1.30s;opacity:0.985}
-.dp-logo-frame .dp-light-runner:nth-of-type(4){inset:21px;animation-delay:-1.95s;opacity:0.970}
-.dp-logo-frame .dp-light-runner:nth-of-type(5){inset:28px;animation-delay:-2.60s;opacity:0.955}
-.dp-logo-frame .dp-light-runner:nth-of-type(6){inset:35px;animation-delay:-3.25s;opacity:0.940}
-.dp-logo-frame .dp-light-runner:nth-of-type(7){inset:42px;animation-delay:-3.90s;opacity:0.925}
-.dp-logo-frame .dp-light-runner:nth-of-type(8){inset:49px;animation-delay:-4.55s;opacity:0.910}
+.dp-logo-frame{position:relative!important;display:block!important;box-sizing:border-box!important;width:min(760px,94vw)!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;margin:0 auto 26px!important;padding:56px!important;border:0!important;border-radius:20px!important;overflow:visible!important;isolation:isolate!important;line-height:0!important;background:transparent!important}
+.dp-logo-frame:before,.dp-logo-frame:after{content:none!important;display:none!important}
+.dp-logo-frame .logo{position:relative!important;inset:auto!important;display:block!important;box-sizing:border-box!important;width:100%!important;height:auto!important;min-width:0!important;max-width:100%!important;aspect-ratio:auto!important;object-fit:contain!important;border-radius:6px!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;z-index:1!important}
+.dp-logo-frame .dp-light-runner{position:absolute!important;inset:0!important;display:block!important;box-sizing:border-box!important;border:3px solid transparent!important;border-radius:20px!important;padding:0!important;pointer-events:none!important;z-index:3!important;background:conic-gradient(from var(--dp-band-angle),#ff1744 0deg,#ff5a9b 45deg,#a52dff 90deg,#168cff 140deg,#00eaff 180deg,#168cff 220deg,#a52dff 270deg,#ff1744 315deg,#ff1744 360deg) border-box!important;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0)!important;-webkit-mask-composite:xor!important;mask-composite:exclude!important;animation:dpBandFlow 5.2s linear infinite!important;filter:drop-shadow(0 0 4px rgba(255,23,68,.95)) drop-shadow(0 0 7px rgba(22,140,255,.9))!important}
+.dp-logo-frame .dp-light-runner:nth-of-type(2){inset:14px!important;border-radius:16px!important;animation-delay:-.65s!important}
+.dp-logo-frame .dp-light-runner:nth-of-type(3){inset:28px!important;border-radius:12px!important;animation-delay:-1.3s!important}
+.dp-logo-frame .dp-light-runner:nth-of-type(4){inset:42px!important;border-radius:8px!important;animation-delay:-1.95s!important}
+.dp-logo-frame .dp-light-runner:nth-of-type(n+5){display:none!important}
 @keyframes dpBandFlow{from{--dp-band-angle:0deg}to{--dp-band-angle:360deg}}
-@media(max-width:600px){.dp-logo-frame{width:96vw;padding:38px}.dp-logo-frame .dp-light-runner{border-width:2px}}
-@media(prefers-reduced-motion:reduce){.dp-logo-frame .dp-light-runner{animation:none}}
+@media(max-width:600px){.dp-logo-frame{width:96vw!important;padding:42px!important;margin-bottom:22px!important}.dp-logo-frame .dp-light-runner{border-width:2px!important}}
+@media(prefers-reduced-motion:reduce){.dp-logo-frame .dp-light-runner{animation:none!important}}
 
 </style>
 </head>
