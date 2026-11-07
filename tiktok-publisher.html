@@ -13,10 +13,27 @@
 /* D&P FREEBIRD horizontal header logo */
 .top .logo{display:block;width:min(760px,94vw);height:auto;max-width:100%;object-fit:contain;margin:0 auto 18px;border-radius:10px;box-shadow:0 0 10px rgba(255,23,68,.45),0 0 18px rgba(22,140,255,.35)}
 
+
+/* D&P FREEBIRD matching eight moving rectangular logo bands */
+@property --dp-band-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
+.dp-logo-frame{position:relative;display:block;box-sizing:border-box;width:min(760px,94vw);height:auto;margin:0 auto 18px;padding:18px;border-radius:14px;isolation:isolate;line-height:0}
+.dp-logo-frame .logo{position:relative;display:block;box-sizing:border-box;width:100%;height:auto;max-width:100%;margin:0;border:0;border-radius:6px;box-shadow:none;object-fit:contain;z-index:1}
+.dp-logo-frame .dp-light-runner{position:absolute;inset:0;display:block;box-sizing:border-box;border:2px solid transparent;border-radius:14px;pointer-events:none;z-index:3;background:conic-gradient(from var(--dp-band-angle),#ff1744 0deg,#ff5a9b 45deg,#a52dff 90deg,#168cff 140deg,#00eaff 180deg,#168cff 220deg,#a52dff 270deg,#ff1744 315deg,#ff1744 360deg) border-box;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:dpBandFlow 4.8s linear infinite;filter:drop-shadow(0 0 3px rgba(255,23,68,.95)) drop-shadow(0 0 5px rgba(22,140,255,.85))}
+.dp-logo-frame .dp-light-runner:nth-of-type(2){inset:2px;animation-delay:-.6s;opacity:.98}
+.dp-logo-frame .dp-light-runner:nth-of-type(3){inset:4px;animation-delay:-1.2s;opacity:.96}
+.dp-logo-frame .dp-light-runner:nth-of-type(4){inset:6px;animation-delay:-1.8s;opacity:.94}
+.dp-logo-frame .dp-light-runner:nth-of-type(5){inset:8px;animation-delay:-2.4s;opacity:.92}
+.dp-logo-frame .dp-light-runner:nth-of-type(6){inset:10px;animation-delay:-3s;opacity:.9}
+.dp-logo-frame .dp-light-runner:nth-of-type(7){inset:12px;animation-delay:-3.6s;opacity:.88}
+.dp-logo-frame .dp-light-runner:nth-of-type(8){inset:14px;animation-delay:-4.2s;opacity:.86}
+@keyframes dpBandFlow{from{--dp-band-angle:0deg}to{--dp-band-angle:360deg}}
+@media(max-width:600px){.dp-logo-frame{width:96vw;padding:14px}.dp-logo-frame .dp-light-runner{border-width:1.5px}}
+@media(prefers-reduced-motion:reduce){.dp-logo-frame .dp-light-runner{animation:none}}
+
 </style>
 </head>
 <body>
-<header class="top"><div class="wrap"><img class="logo" src="DAF7822B-9724-44C4-B577-CED99085A187.png" alt="D&P FREEBIRD – Radio & Entertainment logo"><div class="bolt">⚡</div><div class="brand">TikTok Publisher</div><p class="tag">Live Wire Entertainment</p><p>Review an original video and publish it directly to your authorised TikTok account.</p><a class="btn" href="index.html">Back to Live Wire</a></div></header>
+<header class="top"><div class="wrap"><div class="dp-logo-frame"><img class="logo" src="DAF7822B-9724-44C4-B577-CED99085A187.png" alt="D&P FREEBIRD – Radio & Entertainment logo"><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span></div><div class="bolt">⚡</div><div class="brand">TikTok Publisher</div><p class="tag">Live Wire Entertainment</p><p>Review an original video and publish it directly to your authorised TikTok account.</p><a class="btn" href="index.html">Back to Live Wire</a></div></header>
 <section><div class="wrap publisher"><div class="card">
 <h1>🎬 Share to TikTok</h1>
 <div class="tiktok-actions"><a class="btn" href="https://live-wire-entertainment-website.dlyons184.workers.dev/tiktok-login">Connect TikTok</a><button class="btn" id="load" type="button">Load TikTok settings</button></div>
