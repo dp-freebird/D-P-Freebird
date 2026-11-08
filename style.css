@@ -17,4 +17,4 @@ section{padding:55px 20px}.card{background:#10101a;border:1px solid #3b3b55;bord
 
 
 /* Official PPL PRS licensing badge */
-.music-licence-wrap{display:flex;justify-content:flex-end;width:100%;margin-top:12px}.music-licence-badge{display:block;width:112px;height:auto;max-width:32vw;object-fit:contain;clip-path:polygon(50% 0%,59% 1%,68% 4%,76% 9%,84% 16%,90% 24%,95% 34%,98% 44%,99% 53%,97% 63%,93% 73%,87% 82%,80% 90%,72% 96%,63% 99%,55% 100%,50% 100%,45% 100%,37% 99%,28% 96%,20% 90%,13% 82%,7% 73%,3% 63%,1% 53%,2% 44%,5% 34%,10% 24%,16% 16%,24% 9%,32% 4%,41% 1%)}@media(max-width:520px){.music-licence-wrap{justify-content:center}.music-licence-badge{width:104px}}
+.music-licence-wrap{display:flex;justify-content:flex-end;width:100%;margin-top:12px}.music-licence-badge{display:block;width:112px;height:auto;max-width:32vw;object-fit:contain;background:transparent}@media(max-width:520px){.music-licence-wrap{justify-content:center}.music-licence-badge{width:104px}}
