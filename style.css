@@ -823,3 +823,78 @@ button,input[type="button"],input[type="submit"],.game-button,.quiz-button{
   animation:none!important;
  }
 }
+
+
+/* STREAM DETECTED: active LIVE WIRE jukebox flashes in official ruby red and bright gold */
+@keyframes lwJukeboxOnAirFlash{
+  0%,100%{
+    border-color:#d6ad62;
+    box-shadow:0 0 12px rgba(214,173,98,.55),0 0 20px rgba(169,21,37,.30),inset 0 0 16px rgba(214,173,98,.08);
+    filter:brightness(1);
+  }
+  50%{
+    border-color:#fff0b3;
+    box-shadow:0 0 19px rgba(255,235,175,.9),0 0 30px rgba(190,20,38,.62),inset 0 0 22px rgba(214,173,98,.15);
+    filter:brightness(1.16);
+  }
+}
+@keyframes lwJukeboxLEDChase{
+  to{--lw-ring-angle:360deg}
+}
+.radio-player.stream-live{
+  animation:lwJukeboxOnAirFlash 1.15s ease-in-out infinite!important;
+  border-color:#d6ad62!important;
+  background-color:#100d08!important;
+}
+.radio-player.stream-live:before{
+  background:conic-gradient(from var(--lw-ring-angle),
+    transparent 0deg 250deg,
+    rgba(169,21,37,.22) 270deg,
+    #a91525 292deg,
+    #ff5362 305deg,
+    #ffe8a6 316deg,
+    #fff4d1 324deg,
+    #d6ad62 337deg,
+    #a91525 350deg,
+    transparent 360deg)!important;
+  animation:lwJukeboxLEDChase 2.2s linear infinite!important;
+  filter:drop-shadow(0 0 5px rgba(255,226,160,.95)) drop-shadow(0 0 11px rgba(169,21,37,.78))!important;
+}
+.radio-player.stream-live .mic{
+  color:#fff0b3!important;
+  text-shadow:0 0 5px #fff,0 0 12px #d6ad62,0 0 20px #a91525!important;
+  animation:lwJukeboxOnAirFlash .8s ease-in-out infinite!important;
+}
+#jukeboxStatusButton.is-live{
+  color:#fff4d9!important;
+  background:linear-gradient(105deg,#5b1018 0%,#a91525 38%,#8a5b20 68%,#d6ad62 100%)!important;
+  border:1px solid #ffe8a6!important;
+  animation:lwJukeboxOnAirFlash .85s ease-in-out infinite!important;
+  box-shadow:0 0 12px rgba(214,173,98,.7),0 0 24px rgba(169,21,37,.55)!important;
+}
+#jukeboxStatusButton.is-live:after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  border-radius:inherit!important;
+  pointer-events:none!important;
+  z-index:2!important;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,245,210,.68) 49%,transparent 63%)!important;
+  animation:jukeboxButtonFlash 1.5s ease-in-out infinite!important;
+}
+.home-live-status.live{
+  border-color:#e6c477!important;
+  animation:lwJukeboxOnAirFlash 1.25s ease-in-out infinite!important;
+}
+.home-live-pill.live{
+  color:#fff2cf!important;
+  background:linear-gradient(105deg,#64131b,#a91525 40%,#8a5b20 72%,#d6ad62)!important;
+  border-color:#ffe8a6!important;
+  animation:lwJukeboxOnAirFlash .95s ease-in-out infinite!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .radio-player.stream-live,.radio-player.stream-live:before,.radio-player.stream-live .mic,
+ #jukeboxStatusButton.is-live,#jukeboxStatusButton.is-live:after,
+ .home-live-status.live,.home-live-pill.live{animation:none!important}
+}
