@@ -341,3 +341,45 @@ body:before{
 main,.page,.site-main,.content-wrap{
   background-color:transparent!important;
 }
+
+
+/* FIX: lock every frame in place; animate only a narrow highlight inside its border */
+@keyframes lwNeatBorderSweep{
+  from{background-position:0 0,0% 50%}
+  to{background-position:0 0,300% 50%}
+}
+.card:before,.home-live-status:before,.request-card:before,.show-card:before,
+.about-card:before,.about-story:before,.note:before,.lw-footer-banner-wrap:after,
+.btn:before,.nav a:before,.nav-actions a:before,button:before,
+.request-button:before,.listen-cta:before,.jukebox-status:before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  box-sizing:border-box!important;
+  display:block!important;
+  padding:0!important;
+  border:2px solid transparent!important;
+  border-radius:inherit!important;
+  transform:none!important;
+  -webkit-mask:none!important;
+  mask:none!important;
+  -webkit-mask-composite:initial!important;
+  mask-composite:add!important;
+  background:
+    linear-gradient(transparent,transparent) padding-box,
+    linear-gradient(90deg,transparent 0%,rgba(169,21,37,.25) 18%,#b51f2b 34%,#fff0b3 48%,#d6ad62 58%,rgba(169,21,37,.25) 76%,transparent 100%) border-box!important;
+  background-size:100% 100%,300% 100%!important;
+  background-position:0 0,0% 50%!important;
+  animation:lwNeatBorderSweep 6.5s linear infinite!important;
+  filter:drop-shadow(0 0 3px rgba(255,224,150,.65))!important;
+  pointer-events:none!important;
+  z-index:3!important;
+}
+.lw-footer-banner-wrap{position:relative!important;overflow:hidden!important}
+.lw-footer-banner-wrap:after{inset:0!important}
+@media(prefers-reduced-motion:reduce){
+ .card:before,.home-live-status:before,.request-card:before,.show-card:before,
+ .about-card:before,.about-story:before,.note:before,.lw-footer-banner-wrap:after,
+ .btn:before,.nav a:before,.nav-actions a:before,button:before,
+ .request-button:before,.listen-cta:before,.jukebox-status:before{animation:none!important}
+}
