@@ -499,3 +499,50 @@ main,.page,.site-main,.content-wrap{
 }
 .lw-footer-banner{filter:drop-shadow(0 0 8px rgba(214,173,98,.28))!important}
 .lw-footer-banner-wrap{background:transparent!important}
+
+
+/* Final colour balance: dark charcoal cards with a restrained moving champagne-gold sweep */
+.show-card,.request-card{
+  background:linear-gradient(135deg,#17130e 0%,#100d09 52%,#17120c 100%)!important;
+  border:1px solid rgba(214,173,98,.72)!important;
+  box-shadow:0 0 8px rgba(214,173,98,.25),inset 0 0 18px rgba(214,173,98,.035)!important;
+}
+.show-card:after,.request-card:after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  border-radius:inherit!important;
+  background:linear-gradient(112deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(214,173,98,0) 41%,
+    rgba(214,173,98,.07) 45%,
+    rgba(255,235,184,.24) 49%,
+    rgba(214,173,98,.15) 53%,
+    rgba(214,173,98,.025) 58%,
+    transparent 66%,
+    transparent 100%) 140% 0/220% 100% no-repeat!important;
+  animation:lwGoldRubyPanelSweep 8s ease-in-out infinite!important;
+  mix-blend-mode:screen!important;
+  opacity:.9!important;
+}
+.show-card h2,.request-card h2{
+  color:#f5dfad!important;
+  text-shadow:0 0 8px rgba(214,173,98,.18)!important;
+}
+.show-card .show-kicker,.show-card .show-time,.request-presenter{
+  color:#d6b66e!important;
+  text-shadow:0 0 6px rgba(214,173,98,.18)!important;
+}
+.request-button{
+  background:linear-gradient(110deg,#21170e,#392719,#21170e)!important;
+  border:1px solid #d6ad62!important;
+  color:#fff4d9!important;
+  box-shadow:0 0 9px rgba(214,173,98,.28),inset 0 0 10px rgba(214,173,98,.07)!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .show-card:after,.request-card:after{animation:none!important}
+}
