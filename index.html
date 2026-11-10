@@ -214,10 +214,11 @@ body{background:radial-gradient(ellipse at 50% -10%,rgba(169,21,37,.16),transpar
 body::before{background:linear-gradient(90deg,transparent,#8d642c,#ffe8a6,#a91525,transparent)!important;box-shadow:0 0 8px #d6ad62,0 0 18px rgba(169,21,37,.8)!important}
 body::after{background:linear-gradient(180deg,transparent,#d6ad62,#a91525,transparent)!important;box-shadow:0 0 8px #d6ad62,0 0 18px rgba(169,21,37,.65)!important}
 .hero{background:radial-gradient(ellipse at 50% 0,rgba(214,173,98,.2),transparent 54%),radial-gradient(ellipse at 80% 25%,rgba(169,21,37,.22),transparent 40%),linear-gradient(180deg,#1a0d08,#080706)!important;border-bottom:1px solid rgba(214,173,98,.5)!important}
-.live-wire-wordmark{width:min(760px,96vw);margin:0 auto 22px;padding:25px 12px;border:2px solid #bd9148;border-radius:18px;background:radial-gradient(ellipse at 50% 0,rgba(169,21,37,.28),transparent 65%),linear-gradient(145deg,#21170e,#080706);box-shadow:0 0 22px rgba(214,173,98,.28),inset 0 0 24px rgba(169,21,37,.14);line-height:1.1}
-.live-wire-monogram{font-size:clamp(55px,12vw,100px);font-weight:1000;letter-spacing:5px;color:#ffe8a6;text-shadow:2px 3px 0 #7a1717,0 0 18px rgba(214,173,98,.5)}
-.live-wire-name{font-size:clamp(32px,7vw,64px);font-weight:1000;letter-spacing:4px;color:#ffe8a6;text-shadow:0 2px 10px #a91525}
-.live-wire-strap{font-size:clamp(12px,2.5vw,19px);font-weight:900;letter-spacing:2px;color:#f2d28d;margin-top:10px}
+.live-wire-logo-wrap{position:relative;width:min(430px,82vw);margin:0 auto 26px;padding:9px;border-radius:50%;isolation:isolate}
+.live-wire-master-logo{position:relative;z-index:1;display:block;width:100%;height:auto;border-radius:50%;box-shadow:0 0 22px rgba(214,173,98,.22)}
+.logo-chase-band{position:absolute;inset:0;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,transparent 0deg 215deg,#d6ad62 235deg,#fff0b3 250deg,#a91525 270deg,#ff5362 290deg,transparent 315deg 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;filter:drop-shadow(0 0 5px rgba(214,173,98,.9)) drop-shadow(0 0 10px rgba(169,21,37,.8));animation:liveWireRingSpin 4s linear infinite;pointer-events:none;z-index:2}
+@keyframes liveWireRingSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.logo-chase-band{animation:none}}
 .tag{color:#ffe8a6!important;font-weight:900;letter-spacing:2px}
 .btn{border:1px solid #bd9148!important;background:linear-gradient(115deg,#26190d,#54151a)!important;color:#fff!important;box-shadow:0 0 12px rgba(214,173,98,.18),inset 0 0 12px rgba(169,21,37,.16)!important}
 .home-live-status,.radio-player,.request-card{border:1px solid rgba(214,173,98,.72)!important;border-radius:18px!important;background:radial-gradient(ellipse at 0 0,rgba(169,21,37,.18),transparent 55%),linear-gradient(145deg,#21170e,#0d0907)!important;box-shadow:0 0 16px rgba(214,173,98,.18),0 0 24px rgba(169,21,37,.12),inset 0 0 20px rgba(214,173,98,.035)!important;animation:none!important}
@@ -228,7 +229,7 @@ footer{border-top:1px solid rgba(214,173,98,.45)!important;color:#c9bda8!importa
 </style></head>
 <body>
 <header class="hero"><div class="wrap">
-<div class="live-wire-wordmark"><div class="live-wire-monogram">LW</div><div class="live-wire-name">LIVE WIRE</div><div class="live-wire-strap">MUSIC • LIVE • BROADCASTING</div></div>
+<div class="live-wire-logo-wrap"><img class="live-wire-master-logo" src="LIVE-WIRE-MASTER-LOGO.png" alt="LIVE WIRE master logo"><span class="logo-chase-band" aria-hidden="true"></span></div><div class="live-wire-name">LIVE WIRE</div><div class="live-wire-strap">MUSIC • LIVE • BROADCASTING</div></div>
 
 <p class="tag">MUSIC • LIVE • BROADCASTING</p>
 <p>Independent broadcasting. Great music, live shows and good company with DJ Disco Dan.</p>
