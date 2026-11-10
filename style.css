@@ -321,3 +321,23 @@ input[type="button"]:hover,input[type="submit"]:hover,.game-button:hover,
  .btn:before,.nav a:before,.nav-actions a:before,button:before,
  .request-button:before,.listen-cta:before,.jukebox-status:before{animation:none!important}
 }
+
+
+/* Richer luxury-gold atmosphere across the site wallpaper */
+html,body{
+  background-color:#080605!important;
+  background-image:
+    radial-gradient(ellipse at 50% 8%,rgba(196,145,52,.17) 0%,rgba(117,72,22,.09) 27%,transparent 58%),
+    radial-gradient(ellipse at 0% 42%,rgba(153,23,35,.11) 0%,transparent 42%),
+    radial-gradient(ellipse at 100% 72%,rgba(191,139,48,.10) 0%,transparent 44%),
+    linear-gradient(135deg,#090706 0%,#17100a 42%,#0b0807 72%,#120908 100%)!important;
+  background-attachment:fixed!important;
+}
+body:before{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(255,218,137,.075),transparent 48%),
+    linear-gradient(115deg,transparent 0%,rgba(214,173,98,.025) 46%,transparent 54%,rgba(169,21,37,.025) 100%)!important;
+}
+main,.page,.site-main,.content-wrap{
+  background-color:transparent!important;
+}
