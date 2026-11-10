@@ -75,3 +75,11 @@ body::after{background:linear-gradient(180deg,transparent,#d6ad62,#a91525,transp
 .lw-footer-banner{display:block;width:min(720px,94vw);height:auto;margin:0 auto 18px;filter:drop-shadow(0 0 12px rgba(214,173,98,.25))}
 .lw-footer a{color:#e8c77e}
 @media(prefers-reduced-motion:reduce){.logo-chase-band,.about-logo-wrap:after{animation:none!important}}
+
+
+/* Shared circular master-logo header treatment on internal pages */
+.about-logo-wrap{position:relative;display:block;width:min(220px,58vw);margin:0 auto 18px;padding:7px;border-radius:50%;isolation:isolate}
+.about-logo{display:block;width:100%;height:auto;border-radius:50%;position:relative;z-index:1}
+.about-logo-wrap:after{content:"";position:absolute;inset:0;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,transparent 0deg 220deg,#d6ad62,#fff0b3,#a91525,#d6ad62,transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:liveWireRingSpin 4s linear infinite;filter:drop-shadow(0 0 7px #d6ad62);pointer-events:none}
+@keyframes liveWireRingSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.about-logo-wrap:after{animation:none}}
