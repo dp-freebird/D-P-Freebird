@@ -53,3 +53,25 @@ a{color:#e8c77e}
 footer{border-top:1px solid rgba(214,173,98,.45);color:#c9bda8}
 footer a{color:#e8c77e}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* Final LIVE WIRE luxury site-wide theme and master logo treatment */
+:root{--lw-gold:#d6ad62;--lw-bright:#fff0b3;--lw-ruby:#a91525;--lw-black:#080706}
+body{background:radial-gradient(ellipse at 50% -10%,rgba(169,21,37,.15),transparent 42%),linear-gradient(145deg,#080706,#100b08 55%,#080706)!important;color:#f7f0e3!important}
+body::before{background:linear-gradient(90deg,transparent,#8d642c,#ffe8a6,#a91525,transparent)!important;box-shadow:0 0 8px #d6ad62,0 0 18px rgba(169,21,37,.8)!important}
+body::after{background:linear-gradient(180deg,transparent,#d6ad62,#a91525,transparent)!important;box-shadow:0 0 8px #d6ad62,0 0 18px rgba(169,21,37,.65)!important}
+.hero{background:radial-gradient(ellipse at 50% 0,rgba(214,173,98,.2),transparent 54%),radial-gradient(ellipse at 80% 25%,rgba(169,21,37,.22),transparent 40%),linear-gradient(180deg,#1a0d08,#080706)!important;border-bottom:1px solid rgba(214,173,98,.5)!important}
+.live-wire-logo-wrap{position:relative;width:min(430px,82vw);margin:0 auto 26px;padding:8px;border-radius:50%;isolation:isolate}
+.live-wire-master-logo{position:relative;z-index:1;display:block;width:100%;height:auto;border-radius:50%;box-shadow:0 0 22px rgba(214,173,98,.22)}
+.logo-chase-band{position:absolute;inset:0;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,transparent 0deg 215deg,#d6ad62 235deg,#fff0b3 250deg,#a91525 270deg,#ff5362 290deg,transparent 315deg 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;filter:drop-shadow(0 0 5px rgba(214,173,98,.9)) drop-shadow(0 0 10px rgba(169,21,37,.8));animation:liveWireRingSpin 4s linear infinite;pointer-events:none;z-index:2}
+@keyframes liveWireRingSpin{to{transform:rotate(360deg)}}
+.tag,.page-tag{color:#ffe8a6!important;font-weight:900;letter-spacing:2px}
+.btn{border:1px solid #bd9148!important;background:linear-gradient(115deg,#26190d,#54151a)!important;color:#fff!important;box-shadow:0 0 12px rgba(214,173,98,.18),inset 0 0 12px rgba(169,21,37,.16)!important}
+.card,.home-live-status,.radio-player,.request-card,.show-card{border:1px solid rgba(214,173,98,.72)!important;border-radius:18px!important;background:radial-gradient(ellipse at 0 0,rgba(169,21,37,.18),transparent 55%),linear-gradient(145deg,#21170e,#0d0907)!important;box-shadow:0 0 16px rgba(214,173,98,.18),0 0 24px rgba(169,21,37,.12),inset 0 0 20px rgba(214,173,98,.035)!important}
+.home-live-title,.radio-player h2,.request-card h3,.card h2,.show-card h2{color:#ffe8a6!important;text-shadow:0 1px 10px rgba(169,21,37,.45)!important}
+.home-live-pill,.jukebox-status,.request-button,.listen-cta{border:1px solid #d6ad62!important;background:linear-gradient(110deg,#4c1715,#6c431b,#24160d)!important;color:#fff!important;box-shadow:0 0 12px rgba(214,173,98,.25),0 0 16px rgba(169,21,37,.2)!important}
+.radio-player::before{background:linear-gradient(120deg,#ffe8a6,#a91525,#bd9148,#ffe8a6)!important;animation:none!important}
+.lw-footer{border-top:1px solid rgba(214,173,98,.5)!important;text-align:center;padding:25px 16px 30px!important;background:linear-gradient(180deg,#100b08,#050403)!important;color:#c9bda8}
+.lw-footer-banner{display:block;width:min(720px,94vw);height:auto;margin:0 auto 18px;filter:drop-shadow(0 0 12px rgba(214,173,98,.25))}
+.lw-footer a{color:#e8c77e}
+@media(prefers-reduced-motion:reduce){.logo-chase-band,.about-logo-wrap:after{animation:none!important}}
