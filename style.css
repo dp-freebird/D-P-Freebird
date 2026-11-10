@@ -383,3 +383,47 @@ main,.page,.site-main,.content-wrap{
  .btn:before,.nav a:before,.nav-actions a:before,button:before,
  .request-button:before,.listen-cta:before,.jukebox-status:before{animation:none!important}
 }
+
+
+/* Interior light sweep for show and song-request panels — fixed cards, moving light only */
+@keyframes lwGoldRubyPanelSweep{
+  0%{background-position:140% 0,0 0}
+  100%{background-position:-60% 0,0 0}
+}
+.show-card,.request-card{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+}
+.show-card:after,.request-card:after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  border-radius:inherit!important;
+  background:
+    linear-gradient(112deg,
+      transparent 0%,
+      transparent 34%,
+      rgba(169,21,37,.04) 40%,
+      rgba(169,21,37,.22) 46%,
+      rgba(255,220,145,.22) 49%,
+      rgba(214,173,98,.16) 52%,
+      rgba(169,21,37,.06) 58%,
+      transparent 66%,
+      transparent 100%) 140% 0/220% 100% no-repeat,
+    linear-gradient(135deg,rgba(214,173,98,.025),transparent 55%) 0 0/100% 100% no-repeat!important;
+  animation:lwGoldRubyPanelSweep 7.5s ease-in-out infinite!important;
+  mix-blend-mode:screen!important;
+}
+.show-card>* ,.request-card>*{
+  position:relative!important;
+  z-index:1!important;
+}
+.show-card:before,.request-card:before{
+  z-index:3!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .show-card:after,.request-card:after{animation:none!important}
+}
