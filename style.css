@@ -291,3 +291,33 @@ input[type="button"]:hover,input[type="submit"]:hover,.game-button:hover,
  input[type="button"],input[type="submit"],input[type="reset"],.game-button,.control-button,
  .arcade-button,.quiz-button,.social-button,.link-button,[role="button"]{animation:none!important}
 }
+
+
+/* Refined lighting: keep every frame perfectly still; sweep slim light bars along its edges */
+@keyframes lwEdgeLightSweep{
+  0%{background-position:0% 50%}
+  100%{background-position:300% 50%}
+}
+.card:before,.home-live-status:before,.request-card:before,.show-card:before,
+.about-card:before,.about-story:before,.note:before,
+.lw-footer-banner-wrap:after,
+.btn:before,.nav a:before,.nav-actions a:before,button:before,
+.request-button:before,.listen-cta:before,.jukebox-status:before{
+  transform:none!important;
+  animation:lwEdgeLightSweep 5.5s linear infinite!important;
+  background:linear-gradient(90deg,
+    transparent 0%,rgba(169,21,37,.18) 24%,
+    #b51f2b 38%,#fff0b3 48%,#d6ad62 56%,
+    rgba(169,21,37,.22) 68%,transparent 100%)!important;
+  background-size:300% 100%!important;
+  filter:drop-shadow(0 0 4px rgba(255,224,150,.75)) drop-shadow(0 0 7px rgba(169,21,37,.55))!important;
+}
+.lw-footer-banner-wrap:after{
+  border-radius:5px!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .card:before,.home-live-status:before,.request-card:before,.show-card:before,
+ .about-card:before,.about-story:before,.note:before,.lw-footer-banner-wrap:after,
+ .btn:before,.nav a:before,.nav-actions a:before,button:before,
+ .request-button:before,.listen-cta:before,.jukebox-status:before{animation:none!important}
+}
