@@ -604,3 +604,42 @@ button,input[type="submit"],.game-button,.quiz-button{
  .request-button,.listen-cta,.jukebox-status,.btn,.nav a,.nav-actions a,
  button,input[type="submit"],.game-button,.quiz-button{animation:none!important}
 }
+
+
+/* GOLD-ONLY correction: eliminate red overlays and red-tinted panel fills */
+.show-card,.request-card,.home-live-status,.radio-player,.card,.note,
+.about-card,.about-story,.music-licence-wrap,.jukebox-wrap{
+  background-color:#100d08!important;
+  background-image:
+    radial-gradient(ellipse at 12% 0%,rgba(214,173,98,.095),transparent 56%),
+    linear-gradient(135deg,#1b160e 0%,#100d08 55%,#0b0907 100%)!important;
+  border-color:rgba(214,173,98,.82)!important;
+  box-shadow:0 0 8px rgba(214,173,98,.28),0 0 16px rgba(214,173,98,.12),inset 0 0 18px rgba(214,173,98,.045)!important;
+}
+.show-card:after,.request-card:after{
+  background:linear-gradient(112deg,
+    transparent 0%,transparent 34%,
+    rgba(214,173,98,0) 41%,
+    rgba(214,173,98,.08) 46%,
+    rgba(255,239,196,.30) 50%,
+    rgba(214,173,98,.14) 54%,
+    transparent 67%,transparent 100%) 140% 0/220% 100% no-repeat!important;
+  opacity:.78!important;
+}
+.request-button,.listen-cta,.jukebox-status,.btn,.nav a,.nav-actions a,
+button,input[type="submit"],.game-button,.quiz-button{
+  background:linear-gradient(110deg,#211a10 0%,#302515 50%,#1a140c 100%)!important;
+  border-color:#d6ad62!important;
+  color:#fff3d6!important;
+  box-shadow:0 0 9px rgba(214,173,98,.32),inset 0 0 10px rgba(214,173,98,.07)!important;
+}
+html,body{
+  background-color:#080705!important;
+  background-image:
+    radial-gradient(ellipse at 50% 0%,rgba(232,190,104,.20),transparent 52%),
+    radial-gradient(ellipse at 10% 38%,rgba(214,173,98,.07),transparent 38%),
+    radial-gradient(ellipse at 92% 70%,rgba(214,173,98,.06),transparent 42%),
+    linear-gradient(118deg,#080706 0%,#191309 34%,#0b0906 65%,#151006 100%)!important;
+}
+.lw-footer-banner-wrap{background:transparent!important}
+.lw-footer-banner{filter:drop-shadow(0 0 10px rgba(232,190,104,.34))!important}
