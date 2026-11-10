@@ -195,3 +195,27 @@ body::after{background:linear-gradient(180deg,transparent,#d6ad62,#a91525,transp
  .card,.home-live-status,.request-card,.show-card,.about-card,.about-story,.note,.radio-player,.btn,.nav a,.nav-actions a,button,.request-button,.listen-cta,.jukebox-status{animation:none!important}
  .card:before,.home-live-status:before,.request-card:before,.show-card:before,.about-card:before,.about-story:before,.note:before,.btn:before,.nav a:before,.nav-actions a:before,button:before,.request-button:before,.listen-cta:before,.jukebox-status:before,.lw-footer-banner-wrap:after{animation:none!important}
 }
+
+
+/* Final visibility pass: animated edging must show on every panel, including song requests */
+.card:before,.home-live-status:before,.request-card:before,.show-card:before,.about-card:before,.about-story:before,.note:before{
+ display:block!important;
+}
+.request-card,.request-button{
+ animation:lwLuxuryBreath 4.8s ease-in-out infinite!important;
+}
+.request-button{
+ border:1px solid #ffe8a6!important;
+ box-shadow:0 0 12px rgba(255,65,78,.55),0 0 20px rgba(214,173,98,.38),inset 0 0 12px rgba(169,21,37,.25)!important;
+}
+.request-button:before{
+ display:block!important;
+ background:conic-gradient(from 0deg,transparent 0deg 225deg,#a91525 240deg,#ff5362 258deg,#fff0b3 275deg,#d6ad62 295deg,transparent 315deg 360deg)!important;
+ animation:lwBorderChase 5.5s linear infinite!important;
+}
+.lw-footer-banner-wrap{overflow:visible}
+.lw-footer-banner-wrap:after{display:block!important}
+@media(prefers-reduced-motion:reduce){
+ .request-card,.request-button{animation:none!important}
+ .request-button:before,.lw-footer-banner-wrap:after{animation:none!important}
+}
