@@ -97,3 +97,21 @@ body::after{background:linear-gradient(180deg,transparent,#d6ad62,#a91525,transp
 @keyframes lwRubyPulse{0%,100%{box-shadow:0 0 9px rgba(169,21,37,.25),0 0 15px rgba(214,173,98,.18)}50%{box-shadow:0 0 15px rgba(255,35,55,.52),0 0 24px rgba(214,173,98,.32)}}
 .home-live-status,.request-card,.show-card{animation:lwRubyPulse 4.2s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.home-live-status,.request-card,.show-card{animation:none!important}.logo-chase-band{animation:none!important}}
+
+
+/* LIVE WIRE navigation and action buttons — subtle ruby illumination */
+.btn,.nav a,.nav-actions a,button,.request-button,.listen-cta,.jukebox-status{
+  border-color:#d6ad62!important;
+  background:linear-gradient(115deg,rgba(112,18,25,.48),rgba(77,39,17,.42),rgba(32,16,12,.92))!important;
+  color:#fff7e8!important;
+  box-shadow:0 0 7px rgba(169,21,37,.3),0 0 10px rgba(214,173,98,.16),inset 0 0 9px rgba(169,21,37,.18)!important;
+  transition:box-shadow .25s ease,border-color .25s ease,background .25s ease,transform .25s ease!important;
+}
+.btn:hover,.btn:focus-visible,.nav a:hover,.nav a:focus-visible,.nav-actions a:hover,.nav-actions a:focus-visible,button:hover,button:focus-visible,.request-button:hover,.listen-cta:hover{
+  border-color:#ff5964!important;
+  background:linear-gradient(115deg,rgba(169,21,37,.78),rgba(104,37,22,.62),rgba(42,20,14,.96))!important;
+  box-shadow:0 0 10px rgba(255,48,67,.62),0 0 20px rgba(169,21,37,.48),0 0 25px rgba(214,173,98,.24),inset 0 0 12px rgba(255,63,77,.2)!important;
+  transform:translateY(-1px);
+}
+.btn:active,.nav a:active,.nav-actions a:active,button:active{transform:translateY(0);box-shadow:0 0 12px rgba(255,48,67,.58),inset 0 0 12px rgba(255,63,77,.25)!important}
+@media(prefers-reduced-motion:reduce){.btn,.nav a,.nav-actions a,button{transition:none!important}}
