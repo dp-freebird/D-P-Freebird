@@ -643,3 +643,50 @@ html,body{
 }
 .lw-footer-banner-wrap{background:transparent!important}
 .lw-footer-banner{filter:drop-shadow(0 0 10px rgba(232,190,104,.34))!important}
+
+
+/* HARD OVERRIDE: remove the red half-panel wash completely */
+.request-card,.show-card{
+  background:#14100b!important;
+  background-image:linear-gradient(135deg,#21190f 0%,#14100b 52%,#0d0a07 100%)!important;
+  border:1px solid #c9a45f!important;
+  box-shadow:0 0 8px rgba(214,173,98,.26),inset 0 0 16px rgba(214,173,98,.035)!important;
+}
+.request-card:before,.request-card:after,.show-card:before,.show-card:after{
+  background-color:transparent!important;
+}
+.request-card:before,.show-card:before{
+  content:none!important;
+  display:none!important;
+  animation:none!important;
+}
+.request-card:after,.show-card:after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  width:auto!important;
+  height:auto!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  border-radius:inherit!important;
+  background:linear-gradient(112deg,
+    transparent 0%,transparent 38%,
+    rgba(214,173,98,.025) 44%,
+    rgba(255,235,185,.20) 49%,
+    rgba(214,173,98,.10) 53%,
+    transparent 62%,transparent 100%) 140% 0/220% 100% no-repeat!important;
+  animation:lwGoldRubyPanelSweep 8.5s ease-in-out infinite!important;
+  mix-blend-mode:screen!important;
+  pointer-events:none!important;
+  z-index:0!important;
+}
+.request-card>*,.show-card>*{position:relative!important;z-index:1!important}
+.request-button{
+  background:linear-gradient(110deg,#21190f,#302515,#21190f)!important;
+  border-color:#d6ad62!important;
+  box-shadow:0 0 8px rgba(214,173,98,.28)!important;
+}
