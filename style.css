@@ -546,3 +546,61 @@ main,.page,.site-main,.content-wrap{
 @media(prefers-reduced-motion:reduce){
  .show-card:after,.request-card:after{animation:none!important}
 }
+
+
+/* LIVE WIRE luxury finish: luminous gold atmosphere and gently animated light rims */
+html,body{
+  background-color:#080705!important;
+  background-image:
+    radial-gradient(ellipse at 50% 0%,rgba(232,190,104,.24) 0%,rgba(180,128,48,.12) 22%,transparent 54%),
+    radial-gradient(ellipse at 12% 30%,rgba(214,173,98,.10) 0%,transparent 38%),
+    radial-gradient(ellipse at 90% 62%,rgba(214,173,98,.085) 0%,transparent 42%),
+    linear-gradient(118deg,#080706 0%,#1a140c 30%,#0c0906 57%,#191208 82%,#080706 100%)!important;
+  background-attachment:fixed!important;
+}
+body:before{
+  background:
+    linear-gradient(105deg,transparent 8%,rgba(255,225,158,.035) 28%,transparent 43%,rgba(214,173,98,.055) 58%,transparent 76%),
+    radial-gradient(ellipse at 50% 18%,rgba(255,221,151,.08),transparent 56%)!important;
+  pointer-events:none!important;
+}
+@keyframes lwRimGlow{
+  0%,100%{
+    border-color:rgba(190,145,66,.72);
+    box-shadow:0 0 8px rgba(214,173,98,.24),0 0 16px rgba(169,21,37,.10),inset 0 0 18px rgba(214,173,98,.035);
+  }
+  50%{
+    border-color:rgba(255,224,157,.98);
+    box-shadow:0 0 13px rgba(255,224,157,.48),0 0 24px rgba(214,173,98,.28),0 0 30px rgba(169,21,37,.13),inset 0 0 22px rgba(214,173,98,.075);
+  }
+}
+.show-card,.request-card,.home-live-status,.radio-player,.card,.note,
+.about-card,.about-story,.music-licence-wrap,.jukebox-wrap{
+  border:1px solid rgba(214,173,98,.78)!important;
+  animation:lwRimGlow 5.5s ease-in-out infinite!important;
+}
+.show-card:after,.request-card:after{
+  background:linear-gradient(112deg,
+    transparent 0%,transparent 34%,
+    rgba(214,173,98,.015) 41%,
+    rgba(214,173,98,.11) 46%,
+    rgba(255,235,190,.32) 50%,
+    rgba(214,173,98,.18) 54%,
+    transparent 67%,transparent 100%) 140% 0/220% 100% no-repeat!important;
+  animation:lwGoldRubyPanelSweep 8.5s ease-in-out infinite!important;
+}
+.request-button,.listen-cta,.jukebox-status,.btn,.nav a,.nav-actions a,
+button,input[type="submit"],.game-button,.quiz-button{
+  border:1px solid rgba(231,193,113,.9)!important;
+  animation:lwRimGlow 5s ease-in-out infinite!important;
+  box-shadow:0 0 9px rgba(214,173,98,.3),inset 0 0 10px rgba(214,173,98,.08)!important;
+}
+.lw-footer-banner{
+  filter:drop-shadow(0 0 12px rgba(232,190,104,.42)) drop-shadow(0 0 20px rgba(214,173,98,.16))!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .show-card,.request-card,.home-live-status,.radio-player,.card,.note,
+ .about-card,.about-story,.music-licence-wrap,.jukebox-wrap,
+ .request-button,.listen-cta,.jukebox-status,.btn,.nav a,.nav-actions a,
+ button,input[type="submit"],.game-button,.quiz-button{animation:none!important}
+}
