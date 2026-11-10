@@ -1,126 +1,26 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Our Shows | D&P FREEBIRD</title>
-<meta name="description" content="Discover D&P FREEBIRD radio shows, presenters and schedules with DJ Disco Dan and Mr Phoenix.">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" href="DAF7822B-9724-44C4-B577-CED99085A187.png" type="image/png">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shows | LIVE WIRE</title><meta name="description" content="LIVE WIRE show schedule with DJ Disco Dan. MUSIC • LIVE • BROADCASTING.">
+<link rel="stylesheet" href="style.css"><link rel="icon" href="DAF7822B-9724-44C4-B577-CED99085A187.png" type="image/png">
 <style>
-:root{--red:#ff1744;--blue:#168cff;--purple:#8b35ff}
-body{background:#05060c;color:#fff}
-body::before{background:linear-gradient(90deg,transparent,var(--red),var(--purple),var(--blue),transparent);box-shadow:0 0 9px var(--red),0 0 18px var(--blue)}
-body::after{background:linear-gradient(180deg,transparent,var(--blue),var(--purple),var(--red),transparent);box-shadow:0 0 9px var(--purple),0 0 18px var(--red)}
-.hero{min-height:auto;padding:30px 18px;background:radial-gradient(ellipse at 50% 0,rgba(139,53,255,.2),transparent 60%),#080914;text-align:center}
-.logo{width:min(170px,42vw);aspect-ratio:1;object-fit:cover;border-radius:50%;border:3px solid var(--purple);box-shadow:0 0 12px var(--red),0 0 22px var(--blue)}
-.brand{font-size:clamp(30px,5vw,46px);font-weight:1000;text-transform:uppercase;letter-spacing:2px;text-shadow:0 0 10px var(--red),0 0 18px var(--blue)}
-.tag{color:#cbb6ff;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
-.btn{border:1px solid var(--purple);background:linear-gradient(110deg,rgba(255,23,68,.18),rgba(22,140,255,.18));color:#fff;text-decoration:none}
-.show-card{background:linear-gradient(145deg,#11121f,#090b14);border:1px solid rgba(139,53,255,.55);border-radius:16px;padding:22px;box-shadow:0 0 14px rgba(139,53,255,.1)}
-.show-card h2{font-size:clamp(22px,4vw,30px);margin:0 0 6px}
-.show-kicker{font-size:12px;color:#c7aaff;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}
-.show-time{color:#9bcaff;font-size:17px;font-weight:800;margin:4px 0 12px}
-.shows-grid{display:grid;gap:18px;grid-template-columns:repeat(2,minmax(0,1fr));margin:22px 0}
-@media(max-width:760px){.shows-grid{grid-template-columns:1fr}}
-.schedule-note{border:1px solid rgba(22,140,255,.5);background:#0c1020;padding:16px;border-radius:14px;text-align:center}
-h1{text-align:center}
-footer{text-align:center;padding:22px;color:#aeb2c5;border-top:1px solid rgba(139,53,255,.25)}
-footer a{color:#bba2ff}
+:root{--gold:#e8bd62;--gold2:#fff0b3;--red:#a91525;--ink:#080706}
+.page-hero{text-align:center;padding:34px 18px 26px;background:radial-gradient(ellipse at 50% 0,rgba(196,135,42,.22),transparent 62%),linear-gradient(180deg,#170d08,#080706)}
+.page-hero img{width:min(190px,48vw);height:auto;display:block;margin:0 auto 12px}
+.page-title{font-size:clamp(30px,6vw,48px);letter-spacing:2px;color:var(--gold2);text-shadow:0 2px 12px #a91525;margin:8px 0}
+.page-tag{color:var(--gold);font-weight:900;letter-spacing:2px}
+.nav{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.nav a{color:#fff;text-decoration:none;border:1px solid #bd9148;border-radius:999px;padding:9px 16px;background:linear-gradient(120deg,#21160d,#4a1014);box-shadow:0 0 12px #7b271b}
+main{max-width:1000px;margin:auto;padding:26px 18px 44px}
+.show-card{padding:24px;border:1px solid #bd9148;border-radius:18px;background:radial-gradient(ellipse at 10% 0,rgba(169,21,37,.16),transparent 55%),linear-gradient(145deg,#21170e,#0c0907);box-shadow:0 0 15px rgba(197,147,64,.22),inset 0 0 24px rgba(169,21,37,.08);margin:18px 0}
+.show-card h2{color:var(--gold2);margin:0;font-size:clamp(23px,4vw,32px)}
+.show-time{color:#e6bd70;font-weight:800}.show-kicker{color:#c9944d;text-transform:uppercase;letter-spacing:1.4px;font-size:12px;font-weight:900}
+.note{border:1px solid #8f3027;background:linear-gradient(120deg,rgba(169,21,37,.16),rgba(191,145,72,.08));padding:16px;border-radius:14px;text-align:center}
+footer{border-top:1px solid #6d4b25;color:#c9bda8;text-align:center;padding:22px}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-
-/* Animated neon rims for the show cards */
-.show-card{position:relative;isolation:isolate;overflow:hidden;border:1px solid transparent;background:linear-gradient(145deg,#11121f,#090b14) padding-box,linear-gradient(120deg,#ff1744,#8b35ff,#168cff,#ff1744) border-box;box-shadow:0 0 13px rgba(139,53,255,.2),0 0 22px rgba(22,140,255,.12);transition:transform .25s,box-shadow .25s}
-.show-card::before{content:"";position:absolute;inset:-150%;z-index:-1;background:conic-gradient(from 0deg,transparent 0 75%,rgba(255,23,68,.48) 80%,rgba(139,53,255,.5) 86%,rgba(22,140,255,.48) 92%,transparent 98%);animation:showCardLightSweep 7s linear infinite;pointer-events:none}
-@keyframes showCardLightSweep{to{transform:rotate(360deg)}}
-.show-card:hover{transform:translateY(-4px);box-shadow:0 0 18px rgba(255,23,68,.25),0 0 28px rgba(22,140,255,.22),0 0 34px rgba(139,53,255,.2)}
-.show-card>*{position:relative}
-@media(prefers-reduced-motion:reduce){.show-card::before{animation:none}.show-card:hover{transform:none}}
-
-
-/* Larger matching circular neon logo halo on Our Shows */
-.logo-ring{position:relative;display:block;box-sizing:border-box;width:min(320px,78vw);height:min(320px,78vw);aspect-ratio:1/1;flex:0 0 auto;margin:0 auto 14px;padding:5px;border-radius:50%;isolation:isolate}
-.logo-ring::before{content:"";position:absolute;box-sizing:border-box;inset:0;width:100%;height:100%;border:5px solid transparent;border-radius:50%;background:conic-gradient(from 0deg,#ff1744 0deg,#ff5a9b 55deg,#8b35ff 130deg,#168cff 215deg,#00eaff 275deg,#8b35ff 325deg,#ff1744 360deg) border-box;mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0);mask-composite:exclude;-webkit-mask:linear-gradient(#000 0 0) padding-box,-webkit-linear-gradient(#000 0 0);-webkit-mask-composite:xor;animation:logoHaloSpin 3.2s linear infinite;filter:drop-shadow(0 0 7px rgba(255,23,68,.85)) drop-shadow(0 0 13px rgba(22,140,255,.8));pointer-events:none}
-.logo-ring .logo{position:absolute!important;inset:5px!important;display:block!important;box-sizing:border-box!important;width:calc(100% - 10px)!important;height:calc(100% - 10px)!important;min-width:0!important;max-width:none!important;aspect-ratio:1/1!important;object-fit:cover!important;border-radius:50%!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;z-index:1!important}
-@keyframes logoHaloSpin{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){.logo-ring::before{animation:none}}
-
-
-/* Single true circular halo around the logo */
-.hero .wrap::before,.hero .wrap::after{content:none!important;display:none!important}
-.logo-ring{position:relative!important;display:block!important;box-sizing:border-box!important;width:min(320px,78vw)!important;height:min(320px,78vw)!important;min-width:0!important;min-height:0!important;max-width:none!important;aspect-ratio:1/1!important;flex:0 0 auto!important;margin:0 auto 14px!important;padding:5px!important;border:0!important;border-radius:50%!important;overflow:visible!important;isolation:isolate!important;line-height:0!important}
-.logo-ring::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;width:100%!important;height:100%!important;box-sizing:border-box!important;border:5px solid transparent!important;border-radius:50%!important;padding:0!important;background:conic-gradient(from 0deg,#ff1744 0deg,#ff5a9b 55deg,#8b35ff 130deg,#168cff 215deg,#00eaff 275deg,#8b35ff 325deg,#ff1744 360deg)!important;mask:none!important;-webkit-mask:none!important;animation:logoHaloSpin 3s linear infinite!important;filter:drop-shadow(0 0 7px rgba(255,23,68,.9)) drop-shadow(0 0 13px rgba(22,140,255,.85))!important;pointer-events:none!important}
-.logo-ring .logo{position:absolute!important;inset:5px!important;display:block!important;box-sizing:border-box!important;width:calc(100% - 10px)!important;height:calc(100% - 10px)!important;min-width:0!important;max-width:none!important;aspect-ratio:1/1!important;object-fit:cover!important;border-radius:50%!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;z-index:1!important}
-@keyframes logoHaloSpin{to{transform:rotate(360deg)}}
-@media(prefers-reduced-motion:reduce){.logo-ring::before{animation:none!important}}
-
-
-/* Eight clearly separated neon bands, flowing around the logo like the original circular treatment */
-/* Four complete, concentric rounded-rectangle neon rings, matching the old circular logo treatment */
-/* Two rectangular neon chase rings: bright colour segments travel continuously around each outline */
-@property --dp-band-angle{syntax:"<angle>";inherits:false;initial-value:0deg}
-.hero .logo-ring{position:relative!important;display:block!important;box-sizing:border-box!important;width:min(760px,94vw)!important;height:auto!important;min-height:0!important;aspect-ratio:auto!important;margin:0 auto 26px!important;padding:16px!important;border:0!important;border-radius:20px!important;overflow:visible!important;isolation:isolate!important;line-height:0!important;background:transparent!important}
-.hero .logo-ring:before,.hero .logo-ring:after{content:none!important;display:none!important}
-.hero .logo-ring .logo{position:relative!important;inset:auto!important;display:block!important;box-sizing:border-box!important;width:100%!important;height:auto!important;min-width:0!important;max-width:100%!important;aspect-ratio:auto!important;object-fit:contain!important;border-radius:6px!important;border:0!important;padding:0!important;margin:0!important;box-shadow:none!important;z-index:1!important}
-.hero .logo-ring .dp-light-runner{position:absolute!important;inset:0!important;display:block!important;box-sizing:border-box!important;border:3px solid transparent!important;border-radius:20px!important;padding:0!important;pointer-events:none!important;z-index:3!important;background:conic-gradient(from var(--dp-band-angle),transparent 0deg 235deg,#168cff 250deg,#00eaff 265deg,#a52dff 285deg,#ff5a9b 305deg,#ff1744 330deg,transparent 350deg 360deg) border-box!important;-webkit-mask:linear-gradient(#000 0 0) padding-box,linear-gradient(#000 0 0)!important;-webkit-mask-composite:xor!important;mask-composite:exclude!important;animation:dpBandFlow 3.2s linear infinite!important;filter:drop-shadow(0 0 5px rgba(255,23,68,.98)) drop-shadow(0 0 9px rgba(22,140,255,.98))!important}
-.hero .logo-ring .dp-light-runner:nth-of-type(2){inset:14px!important;border-radius:16px!important;animation-delay:-1.6s!important}
-.hero .logo-ring .dp-light-runner:nth-of-type(n+3){display:none!important}
-@keyframes dpBandFlow{from{--dp-band-angle:0deg}to{--dp-band-angle:360deg}}
-@media(max-width:600px){.hero .logo-ring{width:96vw!important;padding:12px!important;margin-bottom:22px!important}.hero .logo-ring .dp-light-runner{border-width:2px!important}}
-@media(prefers-reduced-motion:reduce){.hero .logo-ring .dp-light-runner{animation:none!important}}
-
-</style>
-</head>
-<body>
-<header class="hero"><div class="wrap">
-<div class="logo-ring"><img class="logo" src="DAF7822B-9724-44C4-B577-CED99085A187.png" alt="D&P FREEBIRD – Radio & Entertainment logo"><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span><span class="dp-light-runner" aria-hidden="true"></span></div>
-
-<p class="tag">Music. Personality. Community.</p>
-<p>Meet the presenters and explore the full radio schedule.</p>
-<a class="btn" href="index.html">Home</a> <a class="btn" href="index.html#listen-live">🎧 Listen Live</a> <a class="btn" href="shows.html">🎙 Our Shows</a> <a class="btn" href="about.html">👥 About Us</a>
-</div></header>
-<main class="wrap">
-<h1>🎙 Our Shows</h1>
-<div class="schedule-note">
-<strong>Presenter update</strong>
-<p>Mr Phoenix is away from Saturday 14 November through 12 December 2026. His Thursday show on 12 November goes ahead as normal. DJ Disco Dan hosts Saturday Floor Fillers from 14 November to 12 December, 8pm–11:30pm. The Phoenix Express returns after Phoenix's break.</p>
-</div>
-<div class="shows-grid">
-<article class="show-card">
-<div class="show-kicker">Wednesday nights · DJ Disco Dan</div>
-<h2>The Wednesday Wire</h2>
-<p class="show-time">Wednesdays · 8:00pm–10:30pm</p>
-<p>Midweek music, requests, nostalgia and cheeky conversation with DJ Disco Dan.</p>
-<ul><li><strong>Radio Rewind</strong> — 30 minutes of tunes from one particular year.</li><li><strong>Midweek Banger</strong> — one featured big tune.</li><li><strong>Dan’s Questionable Choice</strong> — a cheesy guilty-pleasure tune.</li><li><strong>Weathers Originals</strong> — 30 minutes of 60s and 70s oldies. Tunes your Nan still knows.</li><li><strong>Food for Thought</strong> and <strong>Is This Normal?!</strong> — questions and everyday debates for the community.</li></ul>
-</article>
-<article class="show-card">
-<div class="show-kicker">Thursday nights · Mr Phoenix</div>
-<h2>Thunder Thursdays</h2>
-<p class="show-time">Thursdays · around 8:00pm</p>
-<p>Mr Phoenix brings a lively mix of music, surprises and cheeky banter to Thursday nights.</p>
-</article>
-<article class="show-card">
-<div class="show-kicker">Friday nights · DJ Disco Dan</div>
-<h2>Feel Good Friday</h2>
-<p class="show-time">Fridays · 7:30pm–11:30pm (may run over)</p>
-<p>Your weekend starts here, with music across the decades, singalong favourites, forgotten gems, nostalgia and plenty of feel-good energy.</p>
-<ul><li><strong>Ham Bag Tune Dig</strong> — forgotten musical gems.</li><li><strong>Serious Jockin’</strong> — 10pm, one full hour of non-stop music with no talking.</li><li><strong>The Magic Half Hour</strong> — 11pm–11:30pm.</li></ul>
-</article>
-<article class="show-card">
-<div class="show-kicker">Saturday nights · Mr Phoenix</div>
-<h2>The Phoenix Express</h2>
-<p class="show-time">Saturdays · 8:00pm</p>
-<p>All aboard for a musical journey through the decades, with big tunes, nostalgia and Mr Phoenix’s trademark cheeky banter.</p>
-<p><strong>Temporary schedule:</strong> Phoenix is away 14 November–12 December. The Phoenix Express returns after his break.</p>
-</article>
-<article class="show-card">
-<div class="show-kicker">Saturday cover · DJ Disco Dan</div>
-<h2>Saturday Floor Fillers</h2>
-<p class="show-time">14 November–12 December · 8:00pm–11:30pm</p>
-<p>DJ Disco Dan keeps Saturday nights moving with a floor-filling mix while Mr Phoenix is away.</p>
-</article>
-</div>
-</main>
-<footer><p>© 2026 D&P FREEBIRD – Radio & Entertainment</p><p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p><div class="music-licence-wrap"><img class="music-licence-badge" src="ppl-prs-badge.svg" alt="PPL PRS – United for Music"></div></footer>
-</body>
-</html>
+</style></head><body>
+<header class="page-hero"><img src="DAF7822B-9724-44C4-B577-CED99085A187.png" alt="LIVE WIRE"><h1 class="page-title">OUR SHOWS</h1><p class="page-tag">MUSIC • LIVE • BROADCASTING</p><nav class="nav"><a href="index.html">Home</a><a href="index.html#listen-live">Listen Live</a><a href="about.html">About LIVE WIRE</a></nav></header>
+<main><div class="note"><strong>LIVE WIRE — YOUR HOME FOR GREAT MUSIC</strong><p>Join DJ Disco Dan for live shows, favourite tunes, requests and plenty of musical memories.</p></div>
+<article class="show-card"><div class="show-kicker">Wednesday nights · DJ Disco Dan</div><h2>The Wednesday Wire</h2><p class="show-time">Wednesdays · 8:00pm</p><p>Midweek music, requests, nostalgia and cheeky conversation.</p><ul><li><strong>Radio Rewind</strong> — 30 minutes from one particular year.</li><li><strong>Weathers Originals</strong> — a trip through classic oldies.</li><li><strong>Midweek Banger</strong> — one featured big tune.</li><li><strong>Dan’s Questionable Choice</strong> — a cheesy guilty pleasure.</li><li><strong>Food for Thought</strong> and <strong>Is This Normal?!</strong> — everyday debates.</li></ul></article>
+<article class="show-card"><div class="show-kicker">Friday nights · DJ Disco Dan</div><h2>Feel Good Friday</h2><p class="show-time">Fridays · 7:30pm</p><p>Feel-good favourites, singalong classics, forgotten gems and a proper Friday-night soundtrack.</p><ul><li><strong>Ham Bag Tune</strong> — a forgotten musical gem.</li><li><strong>Serious Jockin’</strong> — one hour of non-stop music.</li><li><strong>Midnight Magic</strong> — late-night favourites when the show runs into the evening.</li></ul></article>
+<article class="show-card"><div class="show-kicker">Special Saturday run · DJ Disco Dan</div><h2>Saturday Floor Fillers</h2><p class="show-time">14 November–12 December 2026 · 8:00pm</p><p>A Saturday-night selection of floor-fillers, party favourites and big tunes.</p></article>
+</main><footer><p>© 2026 LIVE WIRE · MUSIC • LIVE • BROADCASTING</p><p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a></p><div class="music-licence-wrap"><img class="music-licence-badge" src="ppl-prs-badge.svg" alt="PPL PRS – United for Music"></div></footer></body></html>
