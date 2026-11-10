@@ -258,3 +258,36 @@ body::after{background:linear-gradient(180deg,transparent,#d6ad62,#a91525,transp
 @media(prefers-reduced-motion:reduce){
  .show-card,.note,.about-card,.about-story,.card,.home-live-status,.request-card{animation:none!important}
 }
+
+
+/* Consistent slow gold-and-ruby pulse for interactive controls across the site */
+@keyframes lwButtonPulse{
+  0%,100%{
+    box-shadow:0 0 7px rgba(214,173,98,.38),0 0 12px rgba(169,21,37,.24),inset 0 0 8px rgba(169,21,37,.10);
+    filter:brightness(1);
+  }
+  50%{
+    box-shadow:0 0 13px rgba(255,232,166,.78),0 0 23px rgba(190,20,38,.52),inset 0 0 13px rgba(169,21,37,.22);
+    filter:brightness(1.12);
+  }
+}
+a.button,a.btn,button,.nav a,.nav-actions a,.request-button,.listen-cta,.jukebox-status,
+input[type="button"],input[type="submit"],input[type="reset"],.game-button,.control-button,
+.arcade-button,.quiz-button,.social-button,.link-button,[role="button"]{
+  animation:lwButtonPulse 4.8s ease-in-out infinite!important;
+  transition:transform .25s ease,filter .25s ease,box-shadow .25s ease!important;
+}
+a.button:hover,a.btn:hover,button:hover,.nav a:hover,.nav-actions a:hover,
+.request-button:hover,.listen-cta:hover,.jukebox-status:hover,
+input[type="button"]:hover,input[type="submit"]:hover,.game-button:hover,
+.control-button:hover,.arcade-button:hover,.quiz-button:hover,.social-button:hover,
+.link-button:hover,[role="button"]:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.2)!important;
+  box-shadow:0 0 17px rgba(255,232,166,.8),0 0 30px rgba(190,20,38,.62)!important;
+}
+@media(prefers-reduced-motion:reduce){
+ a.button,a.btn,button,.nav a,.nav-actions a,.request-button,.listen-cta,.jukebox-status,
+ input[type="button"],input[type="submit"],input[type="reset"],.game-button,.control-button,
+ .arcade-button,.quiz-button,.social-button,.link-button,[role="button"]{animation:none!important}
+}
