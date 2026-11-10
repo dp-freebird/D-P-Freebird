@@ -219,3 +219,42 @@ body::after{background:linear-gradient(180deg,transparent,#d6ad62,#a91525,transp
  .request-card,.request-button{animation:none!important}
  .request-button:before,.lw-footer-banner-wrap:after{animation:none!important}
 }
+
+
+/* Stronger presence for show and information panels */
+.show-card,.note,.about-card,.about-story,.card,.home-live-status,.request-card{
+  border:1px solid #e2b85f!important;
+  background:
+    radial-gradient(ellipse at 8% 0%,rgba(177,20,38,.30),transparent 58%),
+    radial-gradient(ellipse at 100% 100%,rgba(214,173,98,.13),transparent 55%),
+    linear-gradient(135deg,#28170f 0%,#17100d 48%,#0d0908 100%)!important;
+  box-shadow:
+    0 0 5px rgba(255,226,160,.72),
+    0 0 16px rgba(214,173,98,.48),
+    0 0 28px rgba(169,21,37,.42),
+    inset 0 0 24px rgba(169,21,37,.17),
+    inset 0 0 2px rgba(255,240,179,.55)!important;
+}
+.show-card h2,.about-card h2,.about-story h2,.card h2{
+  color:#fff0b3!important;
+  text-shadow:0 0 8px rgba(255,220,145,.38),0 0 16px rgba(169,21,37,.62)!important;
+}
+.show-card .show-kicker,.show-card .show-time{
+  color:#f0c875!important;
+  text-shadow:0 0 8px rgba(214,173,98,.42);
+}
+@keyframes lwPanelSpotlight{
+  0%,100%{box-shadow:0 0 7px rgba(255,226,160,.48),0 0 17px rgba(214,173,98,.34),0 0 24px rgba(169,21,37,.30),inset 0 0 22px rgba(169,21,37,.13)}
+  50%{box-shadow:0 0 12px rgba(255,239,190,.82),0 0 27px rgba(214,173,98,.62),0 0 38px rgba(220,25,48,.52),inset 0 0 30px rgba(169,21,37,.22)}
+}
+.show-card,.note,.about-card,.about-story,.card,.home-live-status,.request-card{
+  animation:lwPanelSpotlight 4.6s ease-in-out infinite!important;
+}
+.show-card:before,.note:before,.about-card:before,.about-story:before,.card:before,.home-live-status:before,.request-card:before{
+  opacity:1!important;
+  filter:drop-shadow(0 0 7px rgba(255,225,155,.95)) drop-shadow(0 0 13px rgba(190,20,38,.85))!important;
+  animation:lwBorderChase 5.8s linear infinite!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .show-card,.note,.about-card,.about-story,.card,.home-live-status,.request-card{animation:none!important}
+}
