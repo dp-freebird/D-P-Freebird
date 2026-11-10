@@ -18,3 +18,38 @@ section{padding:55px 20px}.card{background:#10101a;border:1px solid #3b3b55;bord
 
 /* Official PPL PRS licensing badge */
 .music-licence-wrap{display:flex;justify-content:flex-end;width:100%;margin-top:12px}.music-licence-badge{display:block;width:112px;height:auto;max-width:32vw;object-fit:contain;background:transparent}@media(max-width:520px){.music-licence-wrap{justify-content:center}.music-licence-badge{width:104px}}
+
+
+/* LIVE WIRE luxury black, metallic gold and ruby-red visual identity */
+:root{--lw-gold:#d6ad62;--lw-gold-bright:#ffe8a6;--lw-red:#a91525;--lw-black:#080706;--lw-panel:#17110c}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse at 50% -10%,rgba(169,21,37,.16),transparent 42%),linear-gradient(145deg,#080706,#100b08 55%,#080706);color:#f7f0e3}
+body::before{background:linear-gradient(90deg,transparent,#8d642c,#ffe8a6,#a91525,transparent);box-shadow:0 0 8px #d6ad62,0 0 18px rgba(169,21,37,.8)}
+body::after{background:linear-gradient(180deg,transparent,#d6ad62,#a91525,transparent);box-shadow:0 0 8px #d6ad62,0 0 18px rgba(169,21,37,.65)}
+.hero{min-height:0;padding:32px 18px 34px;background:radial-gradient(ellipse at 50% 0,rgba(214,173,98,.2),transparent 54%),radial-gradient(ellipse at 80% 25%,rgba(169,21,37,.22),transparent 40%),linear-gradient(180deg,#1a0d08,#080706);border-bottom:1px solid rgba(214,173,98,.5)}
+.hero .wrap{max-width:1100px}
+.hero .logo-ring{width:min(760px,96vw)!important;margin:0 auto 20px!important;padding:0!important;border-radius:12px!important}
+.hero .logo-ring .logo{width:100%!important;height:auto!important;object-fit:contain!important;border-radius:8px!important}
+.hero .logo-ring .dp-light-runner{display:none!important}
+.hero .wrap::before,.hero .wrap::after{display:none!important}
+.brand,.hero h1{color:var(--lw-gold-bright);text-shadow:0 2px 10px #7b241b,0 0 22px rgba(214,173,98,.32)}
+.tag{color:var(--lw-gold-bright);font-weight:900;letter-spacing:2px}
+.btn{border:1px solid #bd9148;border-radius:999px;background:linear-gradient(115deg,#26190d,#54151a);color:#fff;box-shadow:0 0 12px rgba(214,173,98,.18),inset 0 0 12px rgba(169,21,37,.16)}
+.btn:hover{border-color:#ffe8a6;box-shadow:0 0 16px rgba(214,173,98,.35),0 0 22px rgba(169,21,37,.25)}
+section{padding:34px 18px}
+.card,.home-live-status,.radio-player,.request-card,.book-promo{border:1px solid rgba(214,173,98,.72)!important;border-radius:18px!important;background:radial-gradient(ellipse at 0 0,rgba(169,21,37,.18),transparent 55%),linear-gradient(145deg,#21170e,#0d0907)!important;box-shadow:0 0 16px rgba(214,173,98,.18),0 0 24px rgba(169,21,37,.12),inset 0 0 20px rgba(214,173,98,.035)!important}
+.home-live-pill,.jukebox-status,.request-button,.listen-cta{border:1px solid #d6ad62!important;background:linear-gradient(110deg,#4c1715,#6c431b,#24160d)!important;color:#fff!important;box-shadow:0 0 12px rgba(214,173,98,.25),0 0 16px rgba(169,21,37,.2)!important}
+.home-live-title,.jukebox-next strong,.radio-player h2,.request-card h3,.card h2{color:#ffe8a6!important;text-shadow:0 1px 10px rgba(169,21,37,.45)!important}
+.home-live-time,.jukebox-next span:last-child,.request-presenter{color:#dfbd7a!important}
+.radio-player{animation:none!important;overflow:hidden}
+.radio-player::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;border:2px solid transparent!important;border-radius:inherit!important;padding:2px!important;background:linear-gradient(120deg,#ffe8a6,#a91525,#bd9148,#ffe8a6) border-box!important;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;-webkit-mask-composite:xor!important;mask-composite:exclude!important;animation:none!important;filter:drop-shadow(0 0 5px rgba(214,173,98,.55))!important;pointer-events:none!important;z-index:0!important}
+.radio-player::after{inset:5px!important;border:1px solid rgba(214,173,98,.2)!important}
+.radio-player>*{position:relative;z-index:1}
+.radio-player .mic{color:#ffe8a6;text-shadow:0 0 10px #a91525}
+.request-grid{grid-template-columns:1fr!important;max-width:700px;margin:auto}
+.request-card::before{display:none!important}
+.request-button{animation:none!important}
+a{color:#e8c77e}
+footer{border-top:1px solid rgba(214,173,98,.45);color:#c9bda8}
+footer a{color:#e8c77e}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
