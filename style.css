@@ -690,3 +690,70 @@ html,body{
   border-color:#d6ad62!important;
   box-shadow:0 0 8px rgba(214,173,98,.28)!important;
 }
+
+
+/* RESET THE LIGHTING: no pseudo-element streaks, stripes, spinning outlines or overlays */
+body:before,body:after,
+.card:before,.card:after,.home-live-status:before,.home-live-status:after,
+.request-card:before,.request-card:after,.show-card:before,.show-card:after,
+.about-card:before,.about-card:after,.about-story:before,.about-story:after,
+.note:before,.note:after,.radio-player:before,.radio-player:after,
+.btn:before,.btn:after,.nav a:before,.nav a:after,
+.nav-actions a:before,.nav-actions a:after,button:before,button:after,
+.request-button:before,.request-button:after,.listen-cta:before,.listen-cta:after,
+.jukebox-status:before,.jukebox-status:after,.jukebox-next:before,.jukebox-next:after{
+  content:none!important;
+  display:none!important;
+  animation:none!important;
+  transform:none!important;
+  background:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+
+/* A single smooth champagne-gold colour wash travels INSIDE each fixed panel */
+@keyframes lwContainedGoldWash{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+.home-live-status,.radio-player,.request-card,.show-card,.jukebox-next,
+.book-promo,.card,.note,.about-card,.about-story{
+  position:relative!important;
+  overflow:hidden!important;
+  background-color:#100d08!important;
+  background-image:linear-gradient(112deg,#100d08 0%,#19140c 27%,#2b2111 48%,#19140c 68%,#100d08 100%)!important;
+  background-size:240% 100%!important;
+  animation:lwContainedGoldWash 12s ease-in-out infinite,lwRimGlow 5.5s ease-in-out infinite!important;
+  border:1px solid rgba(214,173,98,.82)!important;
+  box-shadow:0 0 9px rgba(214,173,98,.28),inset 0 0 18px rgba(214,173,98,.045)!important;
+}
+
+/* Buttons receive a softer gold shimmer, not a red/blue gradient */
+.btn,.request-button,.listen-cta,.jukebox-status,.home-live-pill,
+button,input[type="button"],input[type="submit"],.game-button,.quiz-button{
+  background-image:linear-gradient(110deg,#171208 0%,#2b2111 45%,#3a2b14 52%,#21180c 68%,#171208 100%)!important;
+  background-size:240% 100%!important;
+  animation:lwContainedGoldWash 9s ease-in-out infinite,lwButtonPulse 5.5s ease-in-out infinite!important;
+  border:1px solid #d6ad62!important;
+  color:#fff1cf!important;
+  box-shadow:0 0 9px rgba(214,173,98,.34),inset 0 0 9px rgba(214,173,98,.08)!important;
+}
+.home-live-pill.live,.jukebox-status.is-live{
+  border-color:#e0bd72!important;
+  color:#fff1cf!important;
+  box-shadow:0 0 10px rgba(214,173,98,.38)!important;
+}
+.jukebox-next{
+  border:1px solid rgba(214,173,98,.58)!important;
+  border-radius:10px!important;
+}
+.jukebox-next-label,.jukebox-next strong,.jukebox-next span:last-child{
+  color:#f1d99f!important;
+  text-shadow:0 0 7px rgba(214,173,98,.18)!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .home-live-status,.radio-player,.request-card,.show-card,.jukebox-next,
+ .book-promo,.card,.note,.about-card,.about-story,.btn,.request-button,
+ .listen-cta,.jukebox-status,.home-live-pill,button,input[type="button"],
+ input[type="submit"],.game-button,.quiz-button{animation:none!important}
+}
