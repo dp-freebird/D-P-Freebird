@@ -757,3 +757,69 @@ button,input[type="button"],input[type="submit"],.game-button,.quiz-button{
  .listen-cta,.jukebox-status,.home-live-pill,button,input[type="button"],
  input[type="submit"],.game-button,.quiz-button{animation:none!important}
 }
+
+
+/* MASTER GOLD LIGHT-RING THEME — a bright moving point travels around each frame */
+@property --lw-ring-angle{
+  syntax:"<angle>";
+  inherits:false;
+  initial-value:0deg;
+}
+@keyframes lwGoldRingTravel{
+  to{--lw-ring-angle:360deg}
+}
+.home-live-status,.radio-player,.request-card,.show-card,.jukebox-next,
+.book-promo,.card,.note,.about-card,.about-story,.music-licence-wrap,.jukebox-wrap{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  border:1px solid rgba(214,173,98,.68)!important;
+  background-color:#100d08!important;
+  box-shadow:0 0 10px rgba(214,173,98,.24),inset 0 0 16px rgba(214,173,98,.035)!important;
+}
+.home-live-status:before,.radio-player:before,.request-card:before,.show-card:before,
+.jukebox-next:before,.book-promo:before,.card:before,.note:before,
+.about-card:before,.about-story:before,.music-licence-wrap:before,.jukebox-wrap:before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:5!important;
+  padding:2px!important;
+  border:0!important;
+  border-radius:inherit!important;
+  pointer-events:none!important;
+  background:conic-gradient(from var(--lw-ring-angle),
+    transparent 0deg 292deg,
+    rgba(214,173,98,.08) 306deg,
+    #9b6b25 320deg,
+    #e8c779 333deg,
+    #fff2c6 342deg,
+    #ffe7a2 350deg,
+    #c18b35 356deg,
+    transparent 360deg)!important;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;
+  -webkit-mask-composite:xor!important;
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;
+  mask-composite:exclude!important;
+  animation:lwGoldRingTravel 7s linear infinite!important;
+  filter:drop-shadow(0 0 3px rgba(255,224,150,.9)) drop-shadow(0 0 8px rgba(214,173,98,.6))!important;
+}
+.home-live-status>*,.radio-player>*,.request-card>*,.show-card>*,
+.jukebox-next>*,.book-promo>*,.card>*,.note>*,
+.about-card>*,.about-story>*,.music-licence-wrap>*,.jukebox-wrap>*{
+  position:relative!important;
+  z-index:1!important;
+}
+/* Keep the panels themselves dark and still: only the fine gold rim moves */
+.home-live-status,.radio-player,.request-card,.show-card,.jukebox-next,
+.book-promo,.card,.note,.about-card,.about-story,.music-licence-wrap,.jukebox-wrap{
+  animation:lwRimGlow 5.5s ease-in-out infinite!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .home-live-status:before,.radio-player:before,.request-card:before,.show-card:before,
+ .jukebox-next:before,.book-promo:before,.card:before,.note:before,
+ .about-card:before,.about-story:before,.music-licence-wrap:before,.jukebox-wrap:before{
+  animation:none!important;
+ }
+}
