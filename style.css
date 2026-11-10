@@ -18,3 +18,961 @@ section{padding:55px 20px}.card{background:#10101a;border:1px solid #3b3b55;bord
 
 /* Official PPL PRS licensing badge */
 .music-licence-wrap{display:flex;justify-content:flex-end;width:100%;margin-top:12px}.music-licence-badge{display:block;width:112px;height:auto;max-width:32vw;object-fit:contain;background:transparent}@media(max-width:520px){.music-licence-wrap{justify-content:center}.music-licence-badge{width:104px}}
+
+
+/* LIVE WIRE luxury black, metallic gold and ruby-red visual identity */
+:root{--lw-gold:#d6ad62;--lw-gold-bright:#ffe8a6;--lw-red:#a91525;--lw-black:#080706;--lw-panel:#17110c}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse at 50% -10%,rgba(169,21,37,.16),transparent 42%),linear-gradient(145deg,#080706,#100b08 55%,#080706);color:#f7f0e3}
+body::before{background:linear-gradient(90deg,transparent,#8d642c,#ffe8a6,#a91525,transparent);box-shadow:0 0 8px #d6ad62,0 0 18px rgba(169,21,37,.8)}
+body::after{background:linear-gradient(180deg,transparent,#d6ad62,#a91525,transparent);box-shadow:0 0 8px #d6ad62,0 0 18px rgba(169,21,37,.65)}
+.hero{min-height:0;padding:32px 18px 34px;background:radial-gradient(ellipse at 50% 0,rgba(214,173,98,.2),transparent 54%),radial-gradient(ellipse at 80% 25%,rgba(169,21,37,.22),transparent 40%),linear-gradient(180deg,#1a0d08,#080706);border-bottom:1px solid rgba(214,173,98,.5)}
+.hero .wrap{max-width:1100px}
+.hero .logo-ring{width:min(760px,96vw)!important;margin:0 auto 20px!important;padding:0!important;border-radius:12px!important}
+.hero .logo-ring .logo{width:100%!important;height:auto!important;object-fit:contain!important;border-radius:8px!important}
+.hero .logo-ring .dp-light-runner{display:none!important}
+.hero .wrap::before,.hero .wrap::after{display:none!important}
+.brand,.hero h1{color:var(--lw-gold-bright);text-shadow:0 2px 10px #7b241b,0 0 22px rgba(214,173,98,.32)}
+.tag{color:var(--lw-gold-bright);font-weight:900;letter-spacing:2px}
+.btn{border:1px solid #bd9148;border-radius:999px;background:linear-gradient(115deg,#26190d,#54151a);color:#fff;box-shadow:0 0 12px rgba(214,173,98,.18),inset 0 0 12px rgba(169,21,37,.16)}
+.btn:hover{border-color:#ffe8a6;box-shadow:0 0 16px rgba(214,173,98,.35),0 0 22px rgba(169,21,37,.25)}
+section{padding:34px 18px}
+.card,.home-live-status,.radio-player,.request-card,.book-promo{border:1px solid rgba(214,173,98,.72)!important;border-radius:18px!important;background:radial-gradient(ellipse at 0 0,rgba(169,21,37,.18),transparent 55%),linear-gradient(145deg,#21170e,#0d0907)!important;box-shadow:0 0 16px rgba(214,173,98,.18),0 0 24px rgba(169,21,37,.12),inset 0 0 20px rgba(214,173,98,.035)!important}
+.home-live-pill,.jukebox-status,.request-button,.listen-cta{border:1px solid #d6ad62!important;background:linear-gradient(110deg,#4c1715,#6c431b,#24160d)!important;color:#fff!important;box-shadow:0 0 12px rgba(214,173,98,.25),0 0 16px rgba(169,21,37,.2)!important}
+.home-live-title,.jukebox-next strong,.radio-player h2,.request-card h3,.card h2{color:#ffe8a6!important;text-shadow:0 1px 10px rgba(169,21,37,.45)!important}
+.home-live-time,.jukebox-next span:last-child,.request-presenter{color:#dfbd7a!important}
+.radio-player{animation:none!important;overflow:hidden}
+.radio-player::before{content:""!important;display:block!important;position:absolute!important;inset:0!important;border:2px solid transparent!important;border-radius:inherit!important;padding:2px!important;background:linear-gradient(120deg,#ffe8a6,#a91525,#bd9148,#ffe8a6) border-box!important;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;-webkit-mask-composite:xor!important;mask-composite:exclude!important;animation:none!important;filter:drop-shadow(0 0 5px rgba(214,173,98,.55))!important;pointer-events:none!important;z-index:0!important}
+.radio-player::after{inset:5px!important;border:1px solid rgba(214,173,98,.2)!important}
+.radio-player>*{position:relative;z-index:1}
+.radio-player .mic{color:#ffe8a6;text-shadow:0 0 10px #a91525}
+.request-grid{grid-template-columns:1fr!important;max-width:700px;margin:auto}
+.request-card::before{display:none!important}
+.request-button{animation:none!important}
+a{color:#e8c77e}
+footer{border-top:1px solid rgba(214,173,98,.45);color:#c9bda8}
+footer a{color:#e8c77e}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* Final LIVE WIRE luxury site-wide theme and master logo treatment */
+:root{--lw-gold:#d6ad62;--lw-bright:#fff0b3;--lw-ruby:#a91525;--lw-black:#080706}
+body{background:radial-gradient(ellipse at 50% -10%,rgba(169,21,37,.15),transparent 42%),linear-gradient(145deg,#080706,#100b08 55%,#080706)!important;color:#f7f0e3!important}
+body::before{background:linear-gradient(90deg,transparent,#8d642c,#ffe8a6,#a91525,transparent)!important;box-shadow:0 0 8px #d6ad62,0 0 18px rgba(169,21,37,.8)!important}
+body::after{background:linear-gradient(180deg,transparent,#d6ad62,#a91525,transparent)!important;box-shadow:0 0 8px #d6ad62,0 0 18px rgba(169,21,37,.65)!important}
+.hero{background:radial-gradient(ellipse at 50% 0,rgba(214,173,98,.2),transparent 54%),radial-gradient(ellipse at 80% 25%,rgba(169,21,37,.22),transparent 40%),linear-gradient(180deg,#1a0d08,#080706)!important;border-bottom:1px solid rgba(214,173,98,.5)!important}
+.live-wire-logo-wrap{position:relative;width:min(430px,82vw);margin:0 auto 26px;padding:8px;border-radius:50%;isolation:isolate}
+.live-wire-master-logo{position:relative;z-index:1;display:block;width:100%;height:auto;border-radius:50%;box-shadow:0 0 22px rgba(214,173,98,.22)}
+.logo-chase-band{position:absolute;inset:0;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,transparent 0deg 215deg,#d6ad62 235deg,#fff0b3 250deg,#a91525 270deg,#ff5362 290deg,transparent 315deg 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;filter:drop-shadow(0 0 5px rgba(214,173,98,.9)) drop-shadow(0 0 10px rgba(169,21,37,.8));animation:liveWireRingSpin 4s linear infinite;pointer-events:none;z-index:2}
+@keyframes liveWireRingSpin{to{transform:rotate(360deg)}}
+.tag,.page-tag{color:#ffe8a6!important;font-weight:900;letter-spacing:2px}
+.btn{border:1px solid #bd9148!important;background:linear-gradient(115deg,#26190d,#54151a)!important;color:#fff!important;box-shadow:0 0 12px rgba(214,173,98,.18),inset 0 0 12px rgba(169,21,37,.16)!important}
+.card,.home-live-status,.radio-player,.request-card,.show-card{border:1px solid rgba(214,173,98,.72)!important;border-radius:18px!important;background:radial-gradient(ellipse at 0 0,rgba(169,21,37,.18),transparent 55%),linear-gradient(145deg,#21170e,#0d0907)!important;box-shadow:0 0 16px rgba(214,173,98,.18),0 0 24px rgba(169,21,37,.12),inset 0 0 20px rgba(214,173,98,.035)!important}
+.home-live-title,.radio-player h2,.request-card h3,.card h2,.show-card h2{color:#ffe8a6!important;text-shadow:0 1px 10px rgba(169,21,37,.45)!important}
+.home-live-pill,.jukebox-status,.request-button,.listen-cta{border:1px solid #d6ad62!important;background:linear-gradient(110deg,#4c1715,#6c431b,#24160d)!important;color:#fff!important;box-shadow:0 0 12px rgba(214,173,98,.25),0 0 16px rgba(169,21,37,.2)!important}
+.radio-player::before{background:linear-gradient(120deg,#ffe8a6,#a91525,#bd9148,#ffe8a6)!important;animation:none!important}
+.lw-footer{border-top:1px solid rgba(214,173,98,.5)!important;text-align:center;padding:25px 16px 30px!important;background:linear-gradient(180deg,#100b08,#050403)!important;color:#c9bda8}
+.lw-footer-banner{display:block;width:min(720px,94vw);height:auto;margin:0 auto 18px;filter:drop-shadow(0 0 12px rgba(214,173,98,.25))}
+.lw-footer a{color:#e8c77e}
+@media(prefers-reduced-motion:reduce){.logo-chase-band,.about-logo-wrap:after{animation:none!important}}
+
+
+/* Shared circular master-logo header treatment on internal pages */
+.about-logo-wrap{position:relative;display:block;width:min(220px,58vw);margin:0 auto 18px;padding:7px;border-radius:50%;isolation:isolate}
+.about-logo{display:block;width:100%;height:auto;border-radius:50%;position:relative;z-index:1}
+.about-logo-wrap:after{content:"";position:absolute;inset:0;border-radius:50%;padding:5px;background:conic-gradient(from 0deg,transparent 0deg 220deg,#d6ad62,#fff0b3,#a91525,#d6ad62,transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:liveWireRingSpin 4s linear infinite;filter:drop-shadow(0 0 7px #d6ad62);pointer-events:none}
+@keyframes liveWireRingSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.about-logo-wrap:after{animation:none}}
+
+
+/* Extra ruby-red accents and a slightly brighter master-logo halo */
+.live-wire-logo-wrap{filter:drop-shadow(0 0 9px rgba(214,173,98,.42)) drop-shadow(0 0 8px rgba(190,20,38,.34))}
+.logo-chase-band{padding:6px!important;background:conic-gradient(from 0deg,transparent 0deg 190deg,#a91525 205deg,#ff3348 220deg,#fff0b3 232deg,#e3b75e 246deg,#a91525 262deg,#ff3348 280deg,transparent 305deg 360deg)!important;filter:drop-shadow(0 0 7px rgba(255,218,137,.98)) drop-shadow(0 0 15px rgba(213,20,43,.95)) drop-shadow(0 0 22px rgba(213,20,43,.42))!important;animation:liveWireRingSpin 3.4s linear infinite!important}
+.home-live-status,.radio-player,.request-card,.card,.show-card{position:relative;overflow:hidden}
+.home-live-status:after,.radio-player:after,.request-card:after,.card:after,.show-card:after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 0 35%,rgba(190,20,38,.13) 48%,transparent 62%);opacity:.85}
+.home-live-status,.radio-player,.request-card,.card,.show-card{border-color:#d6ad62!important;box-shadow:0 0 12px rgba(214,173,98,.28),0 0 18px rgba(169,21,37,.26),inset 0 0 18px rgba(169,21,37,.11)!important}
+.home-live-status{border-left:4px solid #bd182b!important;border-right:4px solid #bd182b!important}
+.home-live-status .home-live-pill,.jukebox-status,.request-button,.listen-cta{border-color:#ff4352!important;box-shadow:0 0 9px rgba(255,45,65,.48),0 0 15px rgba(214,173,98,.28)!important}
+.radio-player{border-color:#c99b4e!important;background:linear-gradient(145deg,#24130f,#0d0907) padding-box,linear-gradient(115deg,#a91525,#d6ad62,#ff3348,#d6ad62) border-box!important}
+@keyframes lwRubyPulse{0%,100%{box-shadow:0 0 9px rgba(169,21,37,.25),0 0 15px rgba(214,173,98,.18)}50%{box-shadow:0 0 15px rgba(255,35,55,.52),0 0 24px rgba(214,173,98,.32)}}
+.home-live-status,.request-card,.show-card{animation:lwRubyPulse 4.2s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.home-live-status,.request-card,.show-card{animation:none!important}.logo-chase-band{animation:none!important}}
+
+
+/* LIVE WIRE navigation and action buttons — subtle ruby illumination */
+.btn,.nav a,.nav-actions a,button,.request-button,.listen-cta,.jukebox-status{
+  border-color:#d6ad62!important;
+  background:linear-gradient(115deg,rgba(112,18,25,.48),rgba(77,39,17,.42),rgba(32,16,12,.92))!important;
+  color:#fff7e8!important;
+  box-shadow:0 0 7px rgba(169,21,37,.3),0 0 10px rgba(214,173,98,.16),inset 0 0 9px rgba(169,21,37,.18)!important;
+  transition:box-shadow .25s ease,border-color .25s ease,background .25s ease,transform .25s ease!important;
+}
+.btn:hover,.btn:focus-visible,.nav a:hover,.nav a:focus-visible,.nav-actions a:hover,.nav-actions a:focus-visible,button:hover,button:focus-visible,.request-button:hover,.listen-cta:hover{
+  border-color:#ff5964!important;
+  background:linear-gradient(115deg,rgba(169,21,37,.78),rgba(104,37,22,.62),rgba(42,20,14,.96))!important;
+  box-shadow:0 0 10px rgba(255,48,67,.62),0 0 20px rgba(169,21,37,.48),0 0 25px rgba(214,173,98,.24),inset 0 0 12px rgba(255,63,77,.2)!important;
+  transform:translateY(-1px);
+}
+.btn:active,.nav a:active,.nav-actions a:active,button:active{transform:translateY(0);box-shadow:0 0 12px rgba(255,48,67,.58),inset 0 0 12px rgba(255,63,77,.25)!important}
+@media(prefers-reduced-motion:reduce){.btn,.nav a,.nav-actions a,button{transition:none!important}}
+
+
+/* LIVE WIRE live-stream detection: ruby-red and gold jukebox response */
+.radio-player.stream-live{
+  animation:lwJukeboxLivePulse 1.15s ease-in-out infinite!important;
+  border-color:#ff4352!important;
+  box-shadow:0 0 15px rgba(255,48,67,.58),0 0 26px rgba(214,173,98,.42),inset 0 0 22px rgba(169,21,37,.2)!important;
+}
+.radio-player.stream-live:before{
+  content:""!important;display:block!important;position:absolute!important;inset:0!important;
+  border:0!important;border-radius:inherit!important;padding:5px!important;
+  background:conic-gradient(from 0deg,#a91525 0deg,#ff3348 55deg,#ffe8a6 105deg,#d6ad62 155deg,#a91525 220deg,#ff5260 285deg,#ffe8a6 330deg,#a91525 360deg)!important;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;
+  -webkit-mask-composite:xor!important;mask-composite:exclude!important;
+  animation:jukeboxLightRun 1.25s linear infinite!important;
+  filter:brightness(1.45) drop-shadow(0 0 8px rgba(255,48,67,.95)) drop-shadow(0 0 15px rgba(214,173,98,.8))!important;
+  pointer-events:none!important;z-index:0!important;
+}
+.radio-player.stream-live:after{
+  content:""!important;position:absolute!important;inset:5px!important;border-radius:20px!important;
+  border:1px solid rgba(255,232,166,.55)!important;
+  background:radial-gradient(ellipse at 0 50%,rgba(169,21,37,.2),transparent 42%),radial-gradient(ellipse at 100% 50%,rgba(214,173,98,.14),transparent 42%)!important;
+  box-shadow:inset 0 0 18px rgba(169,21,37,.2),0 0 16px rgba(214,173,98,.32)!important;
+  animation:lwJukeboxInner 1s ease-in-out infinite alternate!important;pointer-events:none!important;z-index:0!important;
+}
+.radio-player.stream-live .mic{color:#ffe8a6!important;text-shadow:0 0 10px #ff3348,0 0 18px #d6ad62!important;animation:lwMicGlow .7s ease-in-out infinite alternate}
+#jukeboxStatusButton.is-live{
+  border-color:#ffe08a!important;background:linear-gradient(100deg,#9e1023,#5b2717,#bd9148)!important;
+  color:#fff8e8!important;box-shadow:0 0 12px #ff3348,0 0 22px #d6ad62,0 0 30px rgba(169,21,37,.65)!important;
+  animation:lwJukeboxButton .85s ease-in-out infinite!important;
+}
+.home-live-status.live,.home-live-pill.live{border-color:#ff4352!important;box-shadow:0 0 14px rgba(255,48,67,.5),0 0 22px rgba(214,173,98,.32)!important}
+@keyframes lwJukeboxLivePulse{0%,100%{box-shadow:0 0 14px rgba(255,48,67,.45),0 0 24px rgba(214,173,98,.32)}50%{box-shadow:0 0 22px rgba(255,48,67,.72),0 0 34px rgba(214,173,98,.55)}}
+@keyframes lwJukeboxInner{from{opacity:.45}to{opacity:1}}
+@keyframes lwMicGlow{from{filter:brightness(1)}to{filter:brightness(1.7)}}
+@keyframes lwJukeboxButton{0%,100%{filter:brightness(1)}50%{filter:brightness(1.35)}}
+@media(prefers-reduced-motion:reduce){.radio-player.stream-live,.radio-player.stream-live:before,.radio-player.stream-live:after,.radio-player.stream-live .mic,#jukeboxStatusButton.is-live{animation:none!important}}
+
+
+/* LIVE WIRE finishing pass: slow luxury glow and moving gold/ruby edge */
+:root{--lw-chase-speed:7s}
+@keyframes lwLuxuryBreath{
+  0%,100%{box-shadow:0 0 13px rgba(214,173,98,.25),0 0 18px rgba(169,21,37,.20),inset 0 0 16px rgba(214,173,98,.035)}
+  50%{box-shadow:0 0 22px rgba(255,224,150,.42),0 0 30px rgba(190,20,38,.34),inset 0 0 22px rgba(169,21,37,.12)}
+}
+@keyframes lwBorderChase{
+  to{transform:rotate(360deg)}
+}
+.card,.home-live-status,.request-card,.show-card,.about-card,.about-story,.note,.radio-player{
+  animation:lwLuxuryBreath 5.8s ease-in-out infinite!important;
+  isolation:isolate;
+}
+.card:before,.home-live-status:before,.request-card:before,.show-card:before,.about-card:before,.about-story:before,.note:before{
+  content:"";position:absolute;inset:-1px;border-radius:inherit;padding:2px;
+  background:conic-gradient(from 0deg,transparent 0deg 245deg,#a91525 258deg,#ff5362 270deg,#ffe8a6 282deg,#d6ad62 296deg,transparent 310deg 360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  filter:drop-shadow(0 0 5px rgba(255,224,150,.65)) drop-shadow(0 0 8px rgba(169,21,37,.55));
+  animation:lwBorderChase var(--lw-chase-speed) linear infinite;pointer-events:none;z-index:2;
+}
+.btn,.nav a,.nav-actions a,button,.request-button,.listen-cta,.jukebox-status{
+  position:relative;isolation:isolate;overflow:hidden;
+  animation:lwLuxuryBreath 5.8s ease-in-out infinite;
+}
+.btn:before,.nav a:before,.nav-actions a:before,button:before,.request-button:before,.listen-cta:before,.jukebox-status:before{
+  content:"";position:absolute;inset:-2px;border-radius:inherit;padding:2px;
+  background:conic-gradient(from 0deg,transparent 0deg 245deg,#a91525 258deg,#ff5362 270deg,#fff0b3 282deg,#d6ad62 296deg,transparent 310deg 360deg);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;mask-composite:exclude;
+  filter:drop-shadow(0 0 5px rgba(255,224,150,.75));animation:lwBorderChase 7s linear infinite;
+  pointer-events:none;z-index:3;
+}
+.lw-footer-banner{filter:drop-shadow(0 0 10px rgba(214,173,98,.38)) drop-shadow(0 0 15px rgba(169,21,37,.3));}
+.lw-footer-banner-wrap{position:relative;display:block;width:min(720px,94vw);margin:0 auto 18px;padding:5px;border-radius:5px;isolation:isolate}
+.lw-footer-banner-wrap:after{content:"";position:absolute;inset:0;border-radius:5px;padding:3px;background:conic-gradient(from 0deg,transparent 0deg 245deg,#a91525 258deg,#ff5362 270deg,#fff0b3 282deg,#d6ad62 296deg,transparent 310deg 360deg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;filter:drop-shadow(0 0 6px #d6ad62) drop-shadow(0 0 10px #a91525);animation:lwBorderChase 7s linear infinite;pointer-events:none}
+.lw-footer-banner-wrap .lw-footer-banner{width:100%;margin:0;display:block}
+@media(prefers-reduced-motion:reduce){
+ .card,.home-live-status,.request-card,.show-card,.about-card,.about-story,.note,.radio-player,.btn,.nav a,.nav-actions a,button,.request-button,.listen-cta,.jukebox-status{animation:none!important}
+ .card:before,.home-live-status:before,.request-card:before,.show-card:before,.about-card:before,.about-story:before,.note:before,.btn:before,.nav a:before,.nav-actions a:before,button:before,.request-button:before,.listen-cta:before,.jukebox-status:before,.lw-footer-banner-wrap:after{animation:none!important}
+}
+
+
+/* Final visibility pass: animated edging must show on every panel, including song requests */
+.card:before,.home-live-status:before,.request-card:before,.show-card:before,.about-card:before,.about-story:before,.note:before{
+ display:block!important;
+}
+.request-card,.request-button{
+ animation:lwLuxuryBreath 4.8s ease-in-out infinite!important;
+}
+.request-button{
+ border:1px solid #ffe8a6!important;
+ box-shadow:0 0 12px rgba(255,65,78,.55),0 0 20px rgba(214,173,98,.38),inset 0 0 12px rgba(169,21,37,.25)!important;
+}
+.request-button:before{
+ display:block!important;
+ background:conic-gradient(from 0deg,transparent 0deg 225deg,#a91525 240deg,#ff5362 258deg,#fff0b3 275deg,#d6ad62 295deg,transparent 315deg 360deg)!important;
+ animation:lwBorderChase 5.5s linear infinite!important;
+}
+.lw-footer-banner-wrap{overflow:visible}
+.lw-footer-banner-wrap:after{display:block!important}
+@media(prefers-reduced-motion:reduce){
+ .request-card,.request-button{animation:none!important}
+ .request-button:before,.lw-footer-banner-wrap:after{animation:none!important}
+}
+
+
+/* Stronger presence for show and information panels */
+.show-card,.note,.about-card,.about-story,.card,.home-live-status,.request-card{
+  border:1px solid #e2b85f!important;
+  background:
+    radial-gradient(ellipse at 8% 0%,rgba(177,20,38,.30),transparent 58%),
+    radial-gradient(ellipse at 100% 100%,rgba(214,173,98,.13),transparent 55%),
+    linear-gradient(135deg,#28170f 0%,#17100d 48%,#0d0908 100%)!important;
+  box-shadow:
+    0 0 5px rgba(255,226,160,.72),
+    0 0 16px rgba(214,173,98,.48),
+    0 0 28px rgba(169,21,37,.42),
+    inset 0 0 24px rgba(169,21,37,.17),
+    inset 0 0 2px rgba(255,240,179,.55)!important;
+}
+.show-card h2,.about-card h2,.about-story h2,.card h2{
+  color:#fff0b3!important;
+  text-shadow:0 0 8px rgba(255,220,145,.38),0 0 16px rgba(169,21,37,.62)!important;
+}
+.show-card .show-kicker,.show-card .show-time{
+  color:#f0c875!important;
+  text-shadow:0 0 8px rgba(214,173,98,.42);
+}
+@keyframes lwPanelSpotlight{
+  0%,100%{box-shadow:0 0 7px rgba(255,226,160,.48),0 0 17px rgba(214,173,98,.34),0 0 24px rgba(169,21,37,.30),inset 0 0 22px rgba(169,21,37,.13)}
+  50%{box-shadow:0 0 12px rgba(255,239,190,.82),0 0 27px rgba(214,173,98,.62),0 0 38px rgba(220,25,48,.52),inset 0 0 30px rgba(169,21,37,.22)}
+}
+.show-card,.note,.about-card,.about-story,.card,.home-live-status,.request-card{
+  animation:lwPanelSpotlight 4.6s ease-in-out infinite!important;
+}
+.show-card:before,.note:before,.about-card:before,.about-story:before,.card:before,.home-live-status:before,.request-card:before{
+  opacity:1!important;
+  filter:drop-shadow(0 0 7px rgba(255,225,155,.95)) drop-shadow(0 0 13px rgba(190,20,38,.85))!important;
+  animation:lwBorderChase 5.8s linear infinite!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .show-card,.note,.about-card,.about-story,.card,.home-live-status,.request-card{animation:none!important}
+}
+
+
+/* Consistent slow gold-and-ruby pulse for interactive controls across the site */
+@keyframes lwButtonPulse{
+  0%,100%{
+    box-shadow:0 0 7px rgba(214,173,98,.38),0 0 12px rgba(169,21,37,.24),inset 0 0 8px rgba(169,21,37,.10);
+    filter:brightness(1);
+  }
+  50%{
+    box-shadow:0 0 13px rgba(255,232,166,.78),0 0 23px rgba(190,20,38,.52),inset 0 0 13px rgba(169,21,37,.22);
+    filter:brightness(1.12);
+  }
+}
+a.button,a.btn,button,.nav a,.nav-actions a,.request-button,.listen-cta,.jukebox-status,
+input[type="button"],input[type="submit"],input[type="reset"],.game-button,.control-button,
+.arcade-button,.quiz-button,.social-button,.link-button,[role="button"]{
+  animation:lwButtonPulse 4.8s ease-in-out infinite!important;
+  transition:transform .25s ease,filter .25s ease,box-shadow .25s ease!important;
+}
+a.button:hover,a.btn:hover,button:hover,.nav a:hover,.nav-actions a:hover,
+.request-button:hover,.listen-cta:hover,.jukebox-status:hover,
+input[type="button"]:hover,input[type="submit"]:hover,.game-button:hover,
+.control-button:hover,.arcade-button:hover,.quiz-button:hover,.social-button:hover,
+.link-button:hover,[role="button"]:hover{
+  transform:translateY(-2px);
+  filter:brightness(1.2)!important;
+  box-shadow:0 0 17px rgba(255,232,166,.8),0 0 30px rgba(190,20,38,.62)!important;
+}
+@media(prefers-reduced-motion:reduce){
+ a.button,a.btn,button,.nav a,.nav-actions a,.request-button,.listen-cta,.jukebox-status,
+ input[type="button"],input[type="submit"],input[type="reset"],.game-button,.control-button,
+ .arcade-button,.quiz-button,.social-button,.link-button,[role="button"]{animation:none!important}
+}
+
+
+/* Refined lighting: keep every frame perfectly still; sweep slim light bars along its edges */
+@keyframes lwEdgeLightSweep{
+  0%{background-position:0% 50%}
+  100%{background-position:300% 50%}
+}
+.card:before,.home-live-status:before,.request-card:before,.show-card:before,
+.about-card:before,.about-story:before,.note:before,
+.lw-footer-banner-wrap:after,
+.btn:before,.nav a:before,.nav-actions a:before,button:before,
+.request-button:before,.listen-cta:before,.jukebox-status:before{
+  transform:none!important;
+  animation:lwEdgeLightSweep 5.5s linear infinite!important;
+  background:linear-gradient(90deg,
+    transparent 0%,rgba(169,21,37,.18) 24%,
+    #b51f2b 38%,#fff0b3 48%,#d6ad62 56%,
+    rgba(169,21,37,.22) 68%,transparent 100%)!important;
+  background-size:300% 100%!important;
+  filter:drop-shadow(0 0 4px rgba(255,224,150,.75)) drop-shadow(0 0 7px rgba(169,21,37,.55))!important;
+}
+.lw-footer-banner-wrap:after{
+  border-radius:5px!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .card:before,.home-live-status:before,.request-card:before,.show-card:before,
+ .about-card:before,.about-story:before,.note:before,.lw-footer-banner-wrap:after,
+ .btn:before,.nav a:before,.nav-actions a:before,button:before,
+ .request-button:before,.listen-cta:before,.jukebox-status:before{animation:none!important}
+}
+
+
+/* Richer luxury-gold atmosphere across the site wallpaper */
+html,body{
+  background-color:#080605!important;
+  background-image:
+    radial-gradient(ellipse at 50% 8%,rgba(196,145,52,.17) 0%,rgba(117,72,22,.09) 27%,transparent 58%),
+    radial-gradient(ellipse at 0% 42%,rgba(153,23,35,.11) 0%,transparent 42%),
+    radial-gradient(ellipse at 100% 72%,rgba(191,139,48,.10) 0%,transparent 44%),
+    linear-gradient(135deg,#090706 0%,#17100a 42%,#0b0807 72%,#120908 100%)!important;
+  background-attachment:fixed!important;
+}
+body:before{
+  background:
+    radial-gradient(ellipse at 50% 0%,rgba(255,218,137,.075),transparent 48%),
+    linear-gradient(115deg,transparent 0%,rgba(214,173,98,.025) 46%,transparent 54%,rgba(169,21,37,.025) 100%)!important;
+}
+main,.page,.site-main,.content-wrap{
+  background-color:transparent!important;
+}
+
+
+/* FIX: lock every frame in place; animate only a narrow highlight inside its border */
+@keyframes lwNeatBorderSweep{
+  from{background-position:0 0,0% 50%}
+  to{background-position:0 0,300% 50%}
+}
+.card:before,.home-live-status:before,.request-card:before,.show-card:before,
+.about-card:before,.about-story:before,.note:before,.lw-footer-banner-wrap:after,
+.btn:before,.nav a:before,.nav-actions a:before,button:before,
+.request-button:before,.listen-cta:before,.jukebox-status:before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  box-sizing:border-box!important;
+  display:block!important;
+  padding:0!important;
+  border:2px solid transparent!important;
+  border-radius:inherit!important;
+  transform:none!important;
+  -webkit-mask:none!important;
+  mask:none!important;
+  -webkit-mask-composite:initial!important;
+  mask-composite:add!important;
+  background:
+    linear-gradient(transparent,transparent) padding-box,
+    linear-gradient(90deg,transparent 0%,rgba(169,21,37,.25) 18%,#b51f2b 34%,#fff0b3 48%,#d6ad62 58%,rgba(169,21,37,.25) 76%,transparent 100%) border-box!important;
+  background-size:100% 100%,300% 100%!important;
+  background-position:0 0,0% 50%!important;
+  animation:lwNeatBorderSweep 6.5s linear infinite!important;
+  filter:drop-shadow(0 0 3px rgba(255,224,150,.65))!important;
+  pointer-events:none!important;
+  z-index:3!important;
+}
+.lw-footer-banner-wrap{position:relative!important;overflow:hidden!important}
+.lw-footer-banner-wrap:after{inset:0!important}
+@media(prefers-reduced-motion:reduce){
+ .card:before,.home-live-status:before,.request-card:before,.show-card:before,
+ .about-card:before,.about-story:before,.note:before,.lw-footer-banner-wrap:after,
+ .btn:before,.nav a:before,.nav-actions a:before,button:before,
+ .request-button:before,.listen-cta:before,.jukebox-status:before{animation:none!important}
+}
+
+
+/* Interior light sweep for show and song-request panels — fixed cards, moving light only */
+@keyframes lwGoldRubyPanelSweep{
+  0%{background-position:140% 0,0 0}
+  100%{background-position:-60% 0,0 0}
+}
+.show-card,.request-card{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+}
+.show-card:after,.request-card:after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  border-radius:inherit!important;
+  background:
+    linear-gradient(112deg,
+      transparent 0%,
+      transparent 34%,
+      rgba(169,21,37,.04) 40%,
+      rgba(169,21,37,.22) 46%,
+      rgba(255,220,145,.22) 49%,
+      rgba(214,173,98,.16) 52%,
+      rgba(169,21,37,.06) 58%,
+      transparent 66%,
+      transparent 100%) 140% 0/220% 100% no-repeat,
+    linear-gradient(135deg,rgba(214,173,98,.025),transparent 55%) 0 0/100% 100% no-repeat!important;
+  animation:lwGoldRubyPanelSweep 7.5s ease-in-out infinite!important;
+  mix-blend-mode:screen!important;
+}
+.show-card>* ,.request-card>*{
+  position:relative!important;
+  z-index:1!important;
+}
+.show-card:before,.request-card:before{
+  z-index:3!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .show-card:after,.request-card:after{animation:none!important}
+}
+
+
+/* CLEAN FIX: remove the misplaced animated outline layers completely.
+   Keep only the contained soft light sweep inside show/request cards. */
+.card:before,.home-live-status:before,.request-card:before,.show-card:before,
+.about-card:before,.about-story:before,.note:before,.lw-footer-banner-wrap:after,
+.btn:before,.nav a:before,.nav-actions a:before,button:before,
+.request-button:before,.listen-cta:before,.jukebox-status:before,
+.logo-chase-band:before,.logo-chase-band:after{
+  content:none!important;
+  display:none!important;
+  animation:none!important;
+  transform:none!important;
+  filter:none!important;
+}
+.lw-footer-banner-wrap{
+  overflow:visible!important;
+  border:0!important;
+  padding:0!important;
+  box-shadow:none!important;
+}
+.show-card,.request-card{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+}
+.show-card:after,.request-card:after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  width:auto!important;
+  height:auto!important;
+  margin:0!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  border-radius:inherit!important;
+  pointer-events:none!important;
+  z-index:0!important;
+  animation:lwGoldRubyPanelSweep 7.5s ease-in-out infinite!important;
+}
+.show-card>*,.request-card>*{
+  position:relative!important;
+  z-index:1!important;
+}
+
+
+/* Tone correction: gold/champagne is dominant; ruby is only a restrained accent */
+.show-card,.request-card,.card,.about-card,.about-story,.note,.home-live-status{
+  background:
+    radial-gradient(ellipse at 10% 0%,rgba(214,173,98,.12),transparent 58%),
+    radial-gradient(ellipse at 100% 100%,rgba(169,21,37,.035),transparent 52%),
+    linear-gradient(135deg,#21170e 0%,#15100b 52%,#0c0907 100%)!important;
+  box-shadow:0 0 7px rgba(214,173,98,.35),0 0 14px rgba(169,21,37,.10),inset 0 0 20px rgba(214,173,98,.045)!important;
+}
+.show-card:after,.request-card:after{
+  background:
+    linear-gradient(112deg,
+      transparent 0%,
+      transparent 34%,
+      rgba(214,173,98,.015) 40%,
+      rgba(214,173,98,.08) 46%,
+      rgba(255,232,177,.30) 49%,
+      rgba(214,173,98,.18) 52%,
+      rgba(169,21,37,.018) 58%,
+      transparent 66%,
+      transparent 100%) 140% 0/220% 100% no-repeat,
+    linear-gradient(135deg,rgba(214,173,98,.018),transparent 55%) 0 0/100% 100% no-repeat!important;
+  mix-blend-mode:screen!important;
+}
+.lw-footer-banner{filter:drop-shadow(0 0 8px rgba(214,173,98,.28))!important}
+.lw-footer-banner-wrap{background:transparent!important}
+
+
+/* Final colour balance: dark charcoal cards with a restrained moving champagne-gold sweep */
+.show-card,.request-card{
+  background:linear-gradient(135deg,#17130e 0%,#100d09 52%,#17120c 100%)!important;
+  border:1px solid rgba(214,173,98,.72)!important;
+  box-shadow:0 0 8px rgba(214,173,98,.25),inset 0 0 18px rgba(214,173,98,.035)!important;
+}
+.show-card:after,.request-card:after{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  border-radius:inherit!important;
+  background:linear-gradient(112deg,
+    transparent 0%,
+    transparent 35%,
+    rgba(214,173,98,0) 41%,
+    rgba(214,173,98,.07) 45%,
+    rgba(255,235,184,.24) 49%,
+    rgba(214,173,98,.15) 53%,
+    rgba(214,173,98,.025) 58%,
+    transparent 66%,
+    transparent 100%) 140% 0/220% 100% no-repeat!important;
+  animation:lwGoldRubyPanelSweep 8s ease-in-out infinite!important;
+  mix-blend-mode:screen!important;
+  opacity:.9!important;
+}
+.show-card h2,.request-card h2{
+  color:#f5dfad!important;
+  text-shadow:0 0 8px rgba(214,173,98,.18)!important;
+}
+.show-card .show-kicker,.show-card .show-time,.request-presenter{
+  color:#d6b66e!important;
+  text-shadow:0 0 6px rgba(214,173,98,.18)!important;
+}
+.request-button{
+  background:linear-gradient(110deg,#21170e,#392719,#21170e)!important;
+  border:1px solid #d6ad62!important;
+  color:#fff4d9!important;
+  box-shadow:0 0 9px rgba(214,173,98,.28),inset 0 0 10px rgba(214,173,98,.07)!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .show-card:after,.request-card:after{animation:none!important}
+}
+
+
+/* LIVE WIRE luxury finish: luminous gold atmosphere and gently animated light rims */
+html,body{
+  background-color:#080705!important;
+  background-image:
+    radial-gradient(ellipse at 50% 0%,rgba(232,190,104,.24) 0%,rgba(180,128,48,.12) 22%,transparent 54%),
+    radial-gradient(ellipse at 12% 30%,rgba(214,173,98,.10) 0%,transparent 38%),
+    radial-gradient(ellipse at 90% 62%,rgba(214,173,98,.085) 0%,transparent 42%),
+    linear-gradient(118deg,#080706 0%,#1a140c 30%,#0c0906 57%,#191208 82%,#080706 100%)!important;
+  background-attachment:fixed!important;
+}
+body:before{
+  background:
+    linear-gradient(105deg,transparent 8%,rgba(255,225,158,.035) 28%,transparent 43%,rgba(214,173,98,.055) 58%,transparent 76%),
+    radial-gradient(ellipse at 50% 18%,rgba(255,221,151,.08),transparent 56%)!important;
+  pointer-events:none!important;
+}
+@keyframes lwRimGlow{
+  0%,100%{
+    border-color:rgba(190,145,66,.72);
+    box-shadow:0 0 8px rgba(214,173,98,.24),0 0 16px rgba(169,21,37,.10),inset 0 0 18px rgba(214,173,98,.035);
+  }
+  50%{
+    border-color:rgba(255,224,157,.98);
+    box-shadow:0 0 13px rgba(255,224,157,.48),0 0 24px rgba(214,173,98,.28),0 0 30px rgba(169,21,37,.13),inset 0 0 22px rgba(214,173,98,.075);
+  }
+}
+.show-card,.request-card,.home-live-status,.radio-player,.card,.note,
+.about-card,.about-story,.music-licence-wrap,.jukebox-wrap{
+  border:1px solid rgba(214,173,98,.78)!important;
+  animation:lwRimGlow 5.5s ease-in-out infinite!important;
+}
+.show-card:after,.request-card:after{
+  background:linear-gradient(112deg,
+    transparent 0%,transparent 34%,
+    rgba(214,173,98,.015) 41%,
+    rgba(214,173,98,.11) 46%,
+    rgba(255,235,190,.32) 50%,
+    rgba(214,173,98,.18) 54%,
+    transparent 67%,transparent 100%) 140% 0/220% 100% no-repeat!important;
+  animation:lwGoldRubyPanelSweep 8.5s ease-in-out infinite!important;
+}
+.request-button,.listen-cta,.jukebox-status,.btn,.nav a,.nav-actions a,
+button,input[type="submit"],.game-button,.quiz-button{
+  border:1px solid rgba(231,193,113,.9)!important;
+  animation:lwRimGlow 5s ease-in-out infinite!important;
+  box-shadow:0 0 9px rgba(214,173,98,.3),inset 0 0 10px rgba(214,173,98,.08)!important;
+}
+.lw-footer-banner{
+  filter:drop-shadow(0 0 12px rgba(232,190,104,.42)) drop-shadow(0 0 20px rgba(214,173,98,.16))!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .show-card,.request-card,.home-live-status,.radio-player,.card,.note,
+ .about-card,.about-story,.music-licence-wrap,.jukebox-wrap,
+ .request-button,.listen-cta,.jukebox-status,.btn,.nav a,.nav-actions a,
+ button,input[type="submit"],.game-button,.quiz-button{animation:none!important}
+}
+
+
+/* GOLD-ONLY correction: eliminate red overlays and red-tinted panel fills */
+.show-card,.request-card,.home-live-status,.radio-player,.card,.note,
+.about-card,.about-story,.music-licence-wrap,.jukebox-wrap{
+  background-color:#100d08!important;
+  background-image:
+    radial-gradient(ellipse at 12% 0%,rgba(214,173,98,.095),transparent 56%),
+    linear-gradient(135deg,#1b160e 0%,#100d08 55%,#0b0907 100%)!important;
+  border-color:rgba(214,173,98,.82)!important;
+  box-shadow:0 0 8px rgba(214,173,98,.28),0 0 16px rgba(214,173,98,.12),inset 0 0 18px rgba(214,173,98,.045)!important;
+}
+.show-card:after,.request-card:after{
+  background:linear-gradient(112deg,
+    transparent 0%,transparent 34%,
+    rgba(214,173,98,0) 41%,
+    rgba(214,173,98,.08) 46%,
+    rgba(255,239,196,.30) 50%,
+    rgba(214,173,98,.14) 54%,
+    transparent 67%,transparent 100%) 140% 0/220% 100% no-repeat!important;
+  opacity:.78!important;
+}
+.request-button,.listen-cta,.jukebox-status,.btn,.nav a,.nav-actions a,
+button,input[type="submit"],.game-button,.quiz-button{
+  background:linear-gradient(110deg,#211a10 0%,#302515 50%,#1a140c 100%)!important;
+  border-color:#d6ad62!important;
+  color:#fff3d6!important;
+  box-shadow:0 0 9px rgba(214,173,98,.32),inset 0 0 10px rgba(214,173,98,.07)!important;
+}
+html,body{
+  background-color:#080705!important;
+  background-image:
+    radial-gradient(ellipse at 50% 0%,rgba(232,190,104,.20),transparent 52%),
+    radial-gradient(ellipse at 10% 38%,rgba(214,173,98,.07),transparent 38%),
+    radial-gradient(ellipse at 92% 70%,rgba(214,173,98,.06),transparent 42%),
+    linear-gradient(118deg,#080706 0%,#191309 34%,#0b0906 65%,#151006 100%)!important;
+}
+.lw-footer-banner-wrap{background:transparent!important}
+.lw-footer-banner{filter:drop-shadow(0 0 10px rgba(232,190,104,.34))!important}
+
+
+/* HARD OVERRIDE: remove the red half-panel wash completely */
+.request-card,.show-card{
+  background:#14100b!important;
+  background-image:linear-gradient(135deg,#21190f 0%,#14100b 52%,#0d0a07 100%)!important;
+  border:1px solid #c9a45f!important;
+  box-shadow:0 0 8px rgba(214,173,98,.26),inset 0 0 16px rgba(214,173,98,.035)!important;
+}
+.request-card:before,.request-card:after,.show-card:before,.show-card:after{
+  background-color:transparent!important;
+}
+.request-card:before,.show-card:before{
+  content:none!important;
+  display:none!important;
+  animation:none!important;
+}
+.request-card:after,.show-card:after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  width:auto!important;
+  height:auto!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  border-radius:inherit!important;
+  background:linear-gradient(112deg,
+    transparent 0%,transparent 38%,
+    rgba(214,173,98,.025) 44%,
+    rgba(255,235,185,.20) 49%,
+    rgba(214,173,98,.10) 53%,
+    transparent 62%,transparent 100%) 140% 0/220% 100% no-repeat!important;
+  animation:lwGoldRubyPanelSweep 8.5s ease-in-out infinite!important;
+  mix-blend-mode:screen!important;
+  pointer-events:none!important;
+  z-index:0!important;
+}
+.request-card>*,.show-card>*{position:relative!important;z-index:1!important}
+.request-button{
+  background:linear-gradient(110deg,#21190f,#302515,#21190f)!important;
+  border-color:#d6ad62!important;
+  box-shadow:0 0 8px rgba(214,173,98,.28)!important;
+}
+
+
+/* RESET THE LIGHTING: no pseudo-element streaks, stripes, spinning outlines or overlays */
+body:before,body:after,
+.card:before,.card:after,.home-live-status:before,.home-live-status:after,
+.request-card:before,.request-card:after,.show-card:before,.show-card:after,
+.about-card:before,.about-card:after,.about-story:before,.about-story:after,
+.note:before,.note:after,.radio-player:before,.radio-player:after,
+.btn:before,.btn:after,.nav a:before,.nav a:after,
+.nav-actions a:before,.nav-actions a:after,button:before,button:after,
+.request-button:before,.request-button:after,.listen-cta:before,.listen-cta:after,
+.jukebox-status:before,.jukebox-status:after,.jukebox-next:before,.jukebox-next:after{
+  content:none!important;
+  display:none!important;
+  animation:none!important;
+  transform:none!important;
+  background:none!important;
+  filter:none!important;
+  box-shadow:none!important;
+}
+
+/* A single smooth champagne-gold colour wash travels INSIDE each fixed panel */
+@keyframes lwContainedGoldWash{
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+.home-live-status,.radio-player,.request-card,.show-card,.jukebox-next,
+.book-promo,.card,.note,.about-card,.about-story{
+  position:relative!important;
+  overflow:hidden!important;
+  background-color:#100d08!important;
+  background-image:linear-gradient(112deg,#100d08 0%,#19140c 27%,#2b2111 48%,#19140c 68%,#100d08 100%)!important;
+  background-size:240% 100%!important;
+  animation:lwContainedGoldWash 12s ease-in-out infinite,lwRimGlow 5.5s ease-in-out infinite!important;
+  border:1px solid rgba(214,173,98,.82)!important;
+  box-shadow:0 0 9px rgba(214,173,98,.28),inset 0 0 18px rgba(214,173,98,.045)!important;
+}
+
+/* Buttons receive a softer gold shimmer, not a red/blue gradient */
+.btn,.request-button,.listen-cta,.jukebox-status,.home-live-pill,
+button,input[type="button"],input[type="submit"],.game-button,.quiz-button{
+  background-image:linear-gradient(110deg,#171208 0%,#2b2111 45%,#3a2b14 52%,#21180c 68%,#171208 100%)!important;
+  background-size:240% 100%!important;
+  animation:lwContainedGoldWash 9s ease-in-out infinite,lwButtonPulse 5.5s ease-in-out infinite!important;
+  border:1px solid #d6ad62!important;
+  color:#fff1cf!important;
+  box-shadow:0 0 9px rgba(214,173,98,.34),inset 0 0 9px rgba(214,173,98,.08)!important;
+}
+.home-live-pill.live,.jukebox-status.is-live{
+  border-color:#e0bd72!important;
+  color:#fff1cf!important;
+  box-shadow:0 0 10px rgba(214,173,98,.38)!important;
+}
+.jukebox-next{
+  border:1px solid rgba(214,173,98,.58)!important;
+  border-radius:10px!important;
+}
+.jukebox-next-label,.jukebox-next strong,.jukebox-next span:last-child{
+  color:#f1d99f!important;
+  text-shadow:0 0 7px rgba(214,173,98,.18)!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .home-live-status,.radio-player,.request-card,.show-card,.jukebox-next,
+ .book-promo,.card,.note,.about-card,.about-story,.btn,.request-button,
+ .listen-cta,.jukebox-status,.home-live-pill,button,input[type="button"],
+ input[type="submit"],.game-button,.quiz-button{animation:none!important}
+}
+
+
+/* MASTER GOLD LIGHT-RING THEME — a bright moving point travels around each frame */
+@property --lw-ring-angle{
+  syntax:"<angle>";
+  inherits:false;
+  initial-value:0deg;
+}
+@keyframes lwGoldRingTravel{
+  to{--lw-ring-angle:360deg}
+}
+.home-live-status,.radio-player,.request-card,.show-card,.jukebox-next,
+.book-promo,.card,.note,.about-card,.about-story,.music-licence-wrap,.jukebox-wrap{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  border:1px solid rgba(214,173,98,.68)!important;
+  background-color:#100d08!important;
+  box-shadow:0 0 10px rgba(214,173,98,.24),inset 0 0 16px rgba(214,173,98,.035)!important;
+}
+.home-live-status:before,.radio-player:before,.request-card:before,.show-card:before,
+.jukebox-next:before,.book-promo:before,.card:before,.note:before,
+.about-card:before,.about-story:before,.music-licence-wrap:before,.jukebox-wrap:before{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:5!important;
+  padding:2px!important;
+  border:0!important;
+  border-radius:inherit!important;
+  pointer-events:none!important;
+  background:conic-gradient(from var(--lw-ring-angle),
+    transparent 0deg 292deg,
+    rgba(214,173,98,.08) 306deg,
+    #9b6b25 320deg,
+    #e8c779 333deg,
+    #fff2c6 342deg,
+    #ffe7a2 350deg,
+    #c18b35 356deg,
+    transparent 360deg)!important;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;
+  -webkit-mask-composite:xor!important;
+  mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;
+  mask-composite:exclude!important;
+  animation:lwGoldRingTravel 7s linear infinite!important;
+  filter:drop-shadow(0 0 3px rgba(255,224,150,.9)) drop-shadow(0 0 8px rgba(214,173,98,.6))!important;
+}
+.home-live-status>*,.radio-player>*,.request-card>*,.show-card>*,
+.jukebox-next>*,.book-promo>*,.card>*,.note>*,
+.about-card>*,.about-story>*,.music-licence-wrap>*,.jukebox-wrap>*{
+  position:relative!important;
+  z-index:1!important;
+}
+/* Keep the panels themselves dark and still: only the fine gold rim moves */
+.home-live-status,.radio-player,.request-card,.show-card,.jukebox-next,
+.book-promo,.card,.note,.about-card,.about-story,.music-licence-wrap,.jukebox-wrap{
+  animation:lwRimGlow 5.5s ease-in-out infinite!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .home-live-status:before,.radio-player:before,.request-card:before,.show-card:before,
+ .jukebox-next:before,.book-promo:before,.card:before,.note:before,
+ .about-card:before,.about-story:before,.music-licence-wrap:before,.jukebox-wrap:before{
+  animation:none!important;
+ }
+}
+
+
+/* STREAM DETECTED: active LIVE WIRE jukebox flashes in official ruby red and bright gold */
+@keyframes lwJukeboxOnAirFlash{
+  0%,100%{
+    border-color:#d6ad62;
+    box-shadow:0 0 12px rgba(214,173,98,.55),0 0 20px rgba(169,21,37,.30),inset 0 0 16px rgba(214,173,98,.08);
+    filter:brightness(1);
+  }
+  50%{
+    border-color:#fff0b3;
+    box-shadow:0 0 19px rgba(255,235,175,.9),0 0 30px rgba(190,20,38,.62),inset 0 0 22px rgba(214,173,98,.15);
+    filter:brightness(1.16);
+  }
+}
+@keyframes lwJukeboxLEDChase{
+  to{--lw-ring-angle:360deg}
+}
+.radio-player.stream-live{
+  animation:lwJukeboxOnAirFlash 1.15s ease-in-out infinite!important;
+  border-color:#d6ad62!important;
+  background-color:#100d08!important;
+}
+.radio-player.stream-live:before{
+  background:conic-gradient(from var(--lw-ring-angle),
+    transparent 0deg 250deg,
+    rgba(169,21,37,.22) 270deg,
+    #a91525 292deg,
+    #ff5362 305deg,
+    #ffe8a6 316deg,
+    #fff4d1 324deg,
+    #d6ad62 337deg,
+    #a91525 350deg,
+    transparent 360deg)!important;
+  animation:lwJukeboxLEDChase 2.2s linear infinite!important;
+  filter:drop-shadow(0 0 5px rgba(255,226,160,.95)) drop-shadow(0 0 11px rgba(169,21,37,.78))!important;
+}
+.radio-player.stream-live .mic{
+  color:#fff0b3!important;
+  text-shadow:0 0 5px #fff,0 0 12px #d6ad62,0 0 20px #a91525!important;
+  animation:lwJukeboxOnAirFlash .8s ease-in-out infinite!important;
+}
+#jukeboxStatusButton.is-live{
+  color:#fff4d9!important;
+  background:linear-gradient(105deg,#5b1018 0%,#a91525 38%,#8a5b20 68%,#d6ad62 100%)!important;
+  border:1px solid #ffe8a6!important;
+  animation:lwJukeboxOnAirFlash .85s ease-in-out infinite!important;
+  box-shadow:0 0 12px rgba(214,173,98,.7),0 0 24px rgba(169,21,37,.55)!important;
+}
+#jukeboxStatusButton.is-live:after{
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  border-radius:inherit!important;
+  pointer-events:none!important;
+  z-index:2!important;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,245,210,.68) 49%,transparent 63%)!important;
+  animation:jukeboxButtonFlash 1.5s ease-in-out infinite!important;
+}
+.home-live-status.live{
+  border-color:#e6c477!important;
+  animation:lwJukeboxOnAirFlash 1.25s ease-in-out infinite!important;
+}
+.home-live-pill.live{
+  color:#fff2cf!important;
+  background:linear-gradient(105deg,#64131b,#a91525 40%,#8a5b20 72%,#d6ad62)!important;
+  border-color:#ffe8a6!important;
+  animation:lwJukeboxOnAirFlash .95s ease-in-out infinite!important;
+}
+@media(prefers-reduced-motion:reduce){
+ .radio-player.stream-live,.radio-player.stream-live:before,.radio-player.stream-live .mic,
+ #jukeboxStatusButton.is-live,#jukeboxStatusButton.is-live:after,
+ .home-live-status.live,.home-live-pill.live{animation:none!important}
+}
+
+
+/* LIVE WIRE final polish: clean music-licensing mark and brighter gold chasing panel edges */
+@property --lw-panel-chase {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes lwPanelChase {
+  to { --lw-panel-chase: 360deg; }
+}
+.card,.home-live-status,.radio-player,.request-card,.show-card,
+.about-card,.about-story,.note,.jukebox-next,.book-promo {
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden;
+  border:1px solid rgba(214,173,98,.88)!important;
+  background:linear-gradient(145deg,#21170e,#090706 78%)!important;
+  box-shadow:0 0 17px rgba(214,173,98,.28),0 0 27px rgba(169,21,37,.16),inset 0 0 22px rgba(214,173,98,.07)!important;
+}
+.card:before,.home-live-status:before,.radio-player:before,.request-card:before,
+.show-card:before,.about-card:before,.about-story:before,.note:before,
+.jukebox-next:before,.book-promo:before {
+  content:""!important;
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  pointer-events:none!important;
+  border:2px solid transparent!important;
+  border-radius:inherit!important;
+  padding:2px!important;
+  background:conic-gradient(from var(--lw-panel-chase),
+    transparent 0deg 245deg,
+    #8f641f 258deg,#d6ad62 276deg,#fff2bf 288deg,
+    #fff9e7 295deg,#d6ad62 307deg,#a91525 323deg,
+    transparent 340deg 360deg) border-box!important;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0)!important;
+  -webkit-mask-composite:xor!important;
+  mask-composite:exclude!important;
+  filter:drop-shadow(0 0 5px rgba(255,232,166,.9)) drop-shadow(0 0 11px rgba(214,173,98,.58))!important;
+  animation:lwPanelChase 5.5s linear infinite!important;
+}
+.card>*,.home-live-status>*,.radio-player>*,.request-card>*,
+.show-card>*,.about-card>*,.about-story>*,.note>*,
+.jukebox-next>*,.book-promo>* {position:relative;z-index:1}
+.music-licence-wrap {
+  display:flex!important;
+  justify-content:center!important;
+  align-items:center!important;
+  width:100%!important;
+  margin:14px auto 0!important;
+  padding:0!important;
+  border:0!important;
+  outline:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.music-licence-badge {
+  display:block!important;
+  width:112px!important;
+  height:auto!important;
+  max-width:32vw!important;
+  border:0!important;
+  outline:0!important;
+  border-radius:0!important;
+  padding:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  filter:none!important;
+}
+@media(prefers-reduced-motion:reduce) {
+  .card:before,.home-live-status:before,.radio-player:before,
+  .request-card:before,.show-card:before,.about-card:before,
+  .about-story:before,.note:before,.jukebox-next:before,.book-promo:before {
+    animation:none!important;
+  }
+}
